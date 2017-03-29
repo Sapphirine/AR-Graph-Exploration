@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Xml;
-
+using AR.Core.Logging;
+using ARTypes = AR.Core.Types;
 #if EMBEDED
 using System.Net;
 #else
@@ -206,9 +207,11 @@ namespace AR.Core.Communications
   
 #else
 
-        public static Graph.Graph GetGraphFromURL(String URL)
+        public static void GetGraphFromURL(Graph.Graph retGraph, String URL)
         {
-            Graph.Graph retGraph = new Graph.Graph();
+            var myLogs = AR.Core.Logging.DBLogger.getInstance();
+            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Init GetGraphFromURL", 
+                Module: "GraphMLGraphFactory.GetGraphFromURL", Version: "ALPHA");
 
             try
             {
@@ -228,9 +231,6 @@ namespace AR.Core.Communications
                 // Get elements
                 XmlNodeList Nodes = xmlDoc.GetElementsByTagName("node");
                 XmlNodeList Edges = xmlDoc.GetElementsByTagName("edge");
-
-
-
 
                 foreach (XmlNode Node in Nodes)
                 {
@@ -296,10 +296,12 @@ namespace AR.Core.Communications
             }
             catch (Exception exp)
             {
-                return null;
+                myLogs.LogMessage(ARTypes.LoggingLevels.Error, "Init GetGraphFromURL Exception: " + exp.Message,
+    Module: "GraphMLGraphFactory.GetGraphFromURL", Version: "ALPHA");
+                return;
 
             }
-            return retGraph;
+            return;
         }
 
         public static Graph.Graph GetGraphFromFile(String FileName)

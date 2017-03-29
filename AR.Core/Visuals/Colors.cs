@@ -30,5 +30,19 @@ namespace AR.Core.Visuals
         public static Color White = new Color(1f, 1f, 1f, 0f);
         public static Color Grey = new Color(.5f, .5f, .5f, 0f);
         public static Color Transparent = new Color(0f, 0f, 0f, 1f);
+
+
+        public static Color Red_P25 = new Color(1f, 0f, 0f, .5f);
+        public static Color Orange_P25 = new Color(1f, .5f, 0f, .5f);
+        public static Color Yellow_P25 = new Color(1f, 1f, 0f, .5f);
+        public static Color Green_P25 = new Color(0f, 1f, 0f, .5f);
+        public static Color Blue_P25 = new Color(0f, 0f, 1f, .5f);
+        public static Color Black_P25 = new Color(0f, 0f, 0f, .5f);
+        public static Color White_P25 = new Color(1f, 1f, 1f, .5f);
+        public static Color Grey_P25 = new Color(.5f, .5f, .5f, .5f);
+
+
+
+
     }
 }

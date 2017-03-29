@@ -1,15 +1,23 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using UnityEngine;
+using ARTypes = AR.Core.Types;
 
 namespace AR.Core.Graph
 {
 
-    public class Node
+    public class Node : MonoBehaviour
     {
+        private Logging.DBLogger myLogs;
+
+
+
+
+        //Graph Properties
         private UInt32 _ID;
         public UInt32 ID
         {
@@ -58,23 +66,50 @@ namespace AR.Core.Graph
 
         public GameObject myARObject { get; set; }
 
-        public Node(GameObject myARObject, String UserID)
-        {
 
-            myARObject.transform.localScale= new Vector3(
-                Types.GraphConfiguration.NODE_DIAMETER, Types.GraphConfiguration.NODE_DIAMETER, Types.GraphConfiguration.NODE_DIAMETER);
-            isVisited = false;
+
+
+        public Node()
+        {
             ID = ++Globals.ID_NodesUsed;
-            if (UserID == null || UserID == "")
-                UserID = ID.ToString();
-            else
-                this.UserID = UserID;
+            UserID = ID.ToString();
+            myLogs = Logging.DBLogger.getInstance();
+
+
+            //properties below
+            isVisited = false;
+
             Properties = new Dictionary<string, object>();
             EdgesOut = new Dictionary<uint, Edge>();
             EdgesIn = new Dictionary<uint, Edge>();
-            this.myARObject = myARObject;
+
+            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Start Node Method Called", Module: "Node.Start", Version: "ALPHA");
+
+
         }
 
+        // Use this for initialization
+        void Start()
+        {
+          
+
+
+        }
+
+
+        private void Awake()
+        {
+            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Awake Node Method Called", Module: "Node.Awake", Version: "ALPHA");
+
+
+            myARObject = Visuals.UnityHelperFunctions.CreateGameObject(Types.GraphProperties.Node,
+                PrimitiveType.Sphere, Visuals.Colors.Blue);
+
+            myARObject.transform.localScale = new Vector3(
+                ARTypes.GraphConfiguration.NODE_DIAMETER, ARTypes.GraphConfiguration.NODE_DIAMETER, Types.GraphConfiguration.NODE_DIAMETER);
+
+
+        }
 
         public Boolean isDirectConnected(Node n)
         {
@@ -92,17 +127,16 @@ namespace AR.Core.Graph
             return false;   
         }
 
-
         //Movement of nodes
         public Node MoveTo(Vector3 vec)
         {
-            var x = new Vector3(0, 0, 0);
-            //Vector3.SmoothDamp(myARObject.transform.position, vec, ref x, 2);
-            myARObject.transform.position = vec;
-            CleanEdges();
-
-
+            //Instance Move below
             //myARObject.transform.position = vec;
+            //CleanEdges();
+
+            //Start a smooth movement from start to end!!!
+            StartCoroutine(SmoothMoveObject(myARObject.transform.position, vec, Types.GraphConfiguration.TIME_ANIMATION_MOVENODES));
+
             return this;
 
         }
@@ -114,13 +148,18 @@ namespace AR.Core.Graph
 
         public Node MoveDelta(Vector3 vec)
         {
+            //Instance Move below
             var curLoc = myARObject.transform.position;
-            myARObject.transform.position = new Vector3(vec.x + curLoc.x, vec.y + curLoc.y, vec.z + curLoc.z);
-            CleanEdges();
+            //myARObject.transform.position = new Vector3(vec.x + curLoc.x, vec.y + curLoc.y, vec.z + curLoc.z);
+            //CleanEdges();
+
+            //Start a smooth movement from start to end!!!
+            var moveToVec = new Vector3(vec.x + curLoc.x, vec.y + curLoc.y, vec.z + curLoc.z);
+            StartCoroutine(SmoothMoveObject(myARObject.transform.position, moveToVec, 3.0f));
+
             return this;
 
         }
-
 
         public Node Scale(Vector3 vec)
         {
@@ -162,6 +201,13 @@ namespace AR.Core.Graph
             myARObject.GetComponent<MeshRenderer>().material.color = c;
             return this;
         }
+        public Node ChangeNodeTransparency(float Transparency)
+        {
+            var curColor = myARObject.GetComponent<MeshRenderer>().material.color;
+            curColor.a = Transparency;
+            myARObject.GetComponent<MeshRenderer>().material.color = curColor;
+            return this;
+        }
 
         private void CleanEdges()
         {
@@ -171,6 +217,18 @@ namespace AR.Core.Graph
                 Edge.RecenterEdges();
         }
 
+        IEnumerator SmoothMoveObject(Vector3 startPos, Vector3 endPos, float time)
+        {
+            float i = 0.0f;
+            float rate = 1.0f / time;
+            while (i < 1.0f)
+            {
+                i += Time.deltaTime * rate;
+                myARObject.transform.position = Vector3.Lerp(startPos, endPos, i);
+                CleanEdges();
+                yield return null;
+            }
+        }
     }
 
 }

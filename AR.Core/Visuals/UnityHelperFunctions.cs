@@ -18,8 +18,7 @@ namespace AR.Core.Visuals
             tmpGo.name = myProp.ToString() + "_" + (myID + 1).ToString();
             tmpGo.AddComponent<MeshFilter>();
             tmpGo.AddComponent<MeshRenderer>();
-            tmpGo.GetComponent<MeshRenderer>().material.color = color; // Visuals.Colors.Blue;
-            //Debug.LogError("Globals.ID_NodesUsed " + Globals.ID_NodesUsed.ToString() + " Globals.ID_EdgesUsed" + Globals.ID_EdgesUsed.ToString(), tmpGo);
+            tmpGo.GetComponent<MeshRenderer>().material.color = color;
             return tmpGo;
         }
 

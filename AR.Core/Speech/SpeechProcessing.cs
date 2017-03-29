@@ -4,38 +4,60 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
-
+using AR.Core.Types;
 
 namespace AR.Core.Speech
 {
     public class SpeechProcessing : MonoBehaviour
     {
-        [SerializeField]
-        private string[] m_Keywords;
-        private Graph.Graph m_graph;
+        private Logging.DBLogger myLogs;
+        public string[] m_Keywords = { "Dense", "Sparce", "Test", "Badger", "Reset" };
+        public Graph.Graph m_graph;
         private KeywordRecognizer m_Recognizer;
 
 
-        public SpeechProcessing(string[] Keywords, Graph.Graph g)
+        public SpeechProcessing()
         {
-            m_Keywords = Keywords;
-            m_graph = g;
+            myLogs = Logging.DBLogger.getInstance();
+            myLogs.LogMessage(LoggingLevels.Verbose, "SpeechProcessing Constructor Called", Module: "SpeechProcessing.SpeechProcessing", Version: "ALPHA");
+
         }
 
-        void Start()
+        private void Awake()
         {
+            myLogs.LogMessage(LoggingLevels.Verbose, "SpeechProcessing Awake Called", Module: "SpeechProcessing.Awake", Version: "ALPHA");
+
             m_Recognizer = new KeywordRecognizer(m_Keywords);
             m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
             m_Recognizer.Start();
         }
 
+
+        public void Start() 
+        {
+            myLogs.LogMessage(LoggingLevels.Verbose, "SpeechProcessing Start Called", Module: "SpeechProcessing.Start", Version: "ALPHA");
+        }
+
         private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
         {
-            StringBuilder builder = new StringBuilder();
-            builder.AppendFormat("{0} ({1}){2}", args.text, args.confidence, Environment.NewLine);
-            builder.AppendFormat("\tTimestamp: {0}{1}", args.phraseStartTime, Environment.NewLine);
-            builder.AppendFormat("\tDuration: {0} seconds{1}", args.phraseDuration.TotalSeconds, Environment.NewLine);
-            Debug.Log(builder.ToString());
+            myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: " + String.Format("{0} ({1})", args.text, args.confidence), Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
+
+            //Do Some work
+            switch (args.text)
+            {
+                case "Dense":
+                    myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: Updating the Badger Nodes (Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
+                    m_graph.ShowDenseNodes();
+                    break;
+                case "Reset":
+                    myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: Updating the Badger Nodes (Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
+                    m_graph.ResetColors();
+                    break;
+
+                default:
+                    break;
+
+            }
         }
 
 
