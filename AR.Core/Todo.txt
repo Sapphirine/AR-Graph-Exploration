@@ -1,0 +1,20 @@
+﻿(M) ARTouch - Gameobject to underlying data manip
+(H) Graph - Fix Depth First Search Algo and animation, BFS and animation, reload graph from new source?
+(M) HUD - Build dispay of properties or use text to speach
+(M) Sample Graph - Use Neo4j Connector?
+(H) Visuals - Performance of rendering
+
+IO - Nothing
+Logging - Nothing
+(H) Speach - Nothing
+Types - Nothing
+(M) AR/VR - Nothing
+
+For Final:
+(L) Communications -Neo4j process edge/node properties recursively? , SystemG
+
+Done:
+Graph - Force directed partially working, SQLite or remove
+Logging- Fix to work with Postres
+AR/VR - Clipping and performance
+Read from Neo4

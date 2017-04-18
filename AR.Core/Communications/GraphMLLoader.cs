@@ -290,9 +290,6 @@ namespace AR.Core.Communications
 
                 }
 
-
-
-
             }
             catch (Exception exp)
             {
@@ -400,8 +397,6 @@ namespace AR.Core.Communications
         }
 
 #endif
-
-
 
     }
 }

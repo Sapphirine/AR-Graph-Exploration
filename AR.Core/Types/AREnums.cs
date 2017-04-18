@@ -11,5 +11,5 @@ namespace AR.Core.Types
 
     public enum BoundryScale { Mini, Normal, Room};
 
-
+    public enum GraphTypes { Simple, Sample, Neo4jLocal };
 }

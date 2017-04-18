@@ -64,9 +64,11 @@ namespace AR.Core.Graph
             }
         }
 
+        public String Neo4jPath { get; set; }
+
+
+
         public GameObject myARObject { get; set; }
-
-
 
 
         public Node()
@@ -84,7 +86,7 @@ namespace AR.Core.Graph
             EdgesIn = new Dictionary<uint, Edge>();
 
             myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Start Node Method Called", Module: "Node.Start", Version: "ALPHA");
-
+            Label = "";
 
         }
 
@@ -110,6 +112,14 @@ namespace AR.Core.Graph
 
 
         }
+
+        void GazeEntered()
+        {
+
+            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Node yas GazeEntered", Module: "Node.GazeEntered", Version: "ALPHA");
+
+        }
+
 
         public Boolean isDirectConnected(Node n)
         {
@@ -155,7 +165,7 @@ namespace AR.Core.Graph
 
             //Start a smooth movement from start to end!!!
             var moveToVec = new Vector3(vec.x + curLoc.x, vec.y + curLoc.y, vec.z + curLoc.z);
-            StartCoroutine(SmoothMoveObject(myARObject.transform.position, moveToVec, 3.0f));
+            StartCoroutine(SmoothMoveObject(myARObject.transform.position, moveToVec, 1f));
 
             return this;
 
@@ -169,6 +179,7 @@ namespace AR.Core.Graph
         }
         public Node MoveTo(float x, float y, float z)
         {
+            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Moving Node to x:" + x.ToString() + " y:"+y.ToString() + " z:" +z.ToString(), Module: "Node.GazeEntered", Version: "ALPHA");
             Vector3 vec = new Vector3(x, y, z);
             return MoveTo(vec);
         }
@@ -201,9 +212,21 @@ namespace AR.Core.Graph
             myARObject.GetComponent<MeshRenderer>().material.color = c;
             return this;
         }
+        public Node HideNode()
+        {
+            myARObject.GetComponent<MeshRenderer>().enabled = false;
+            return this;
+        }
+        public Node ShowNode()
+        {
+            myARObject.GetComponent<MeshRenderer>().enabled = true;
+            return this;
+        }
+
         public Node ChangeNodeTransparency(float Transparency)
         {
             var curColor = myARObject.GetComponent<MeshRenderer>().material.color;
+
             curColor.a = Transparency;
             myARObject.GetComponent<MeshRenderer>().material.color = curColor;
             return this;
@@ -219,6 +242,7 @@ namespace AR.Core.Graph
 
         IEnumerator SmoothMoveObject(Vector3 startPos, Vector3 endPos, float time)
         {
+
             float i = 0.0f;
             float rate = 1.0f / time;
             while (i < 1.0f)
@@ -226,9 +250,20 @@ namespace AR.Core.Graph
                 i += Time.deltaTime * rate;
                 myARObject.transform.position = Vector3.Lerp(startPos, endPos, i);
                 CleanEdges();
+
                 yield return null;
+
             }
+        }  
+
+        IEnumerator WaitforSomeSeconds(float waittime)
+        {
+
+            yield return new WaitForSeconds(waittime);
+
         }
+
+
     }
 
 }

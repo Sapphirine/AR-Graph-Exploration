@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 using AR.Core.Types;
+
 
 namespace AR.Core.Graph
 {
@@ -12,6 +14,24 @@ namespace AR.Core.Graph
     {
         private Logging.DBLogger myLogs;
         private Speech.SpeechProcessing mySpeechEngine;
+        private ARTouch.InteractibleManager myInteractibleManager;
+        private ARTouch.GestureManager myGestureManager;
+        public Boolean removeSpeach;
+
+
+
+        public event EventHandler<TextArgs> Feedback;
+        public void RaiseFeedback(string p)
+        {
+            EventHandler<TextArgs> handler = Feedback;
+            if (handler != null && !removeSpeach)
+            {
+                handler(null, new TextArgs(p));
+
+            }
+        }
+
+        public String LABEL = "Sample Graph";
 
         //Graph Properties
 
@@ -29,14 +49,14 @@ namespace AR.Core.Graph
         public Vector3 myScale { get; set; }
         public float mySize { get; set; }
 
-
         public Graph()
         {
-          
+            removeSpeach = false;
             AllNodes = new Dictionary<String, Node>();
             AllEdges = new Dictionary<UInt32, Edge>();
             myLogs = Logging.DBLogger.getInstance();
             myLogs.LogMessage(LoggingLevels.Verbose, "Graph Constructor Called", Module: "Graph.Start", Version: "ALPHA");
+
         }
 
         //this handles all the node select, add, remove commands a user would need
@@ -47,8 +67,13 @@ namespace AR.Core.Graph
             //Overide the default UserID if Label has been provided 
             //This ensures that the lookup from edge to Node matches!!!
             Node node = this.gameObject.AddComponent<Node>();
-            if (Label != "")
-                node.UserID = Label;
+
+            if (Label != "") //added to match node labels to Unity Names
+            {
+                node.Label = Label;
+            }
+            //if (Label != "")
+            //    node.UserID = Label;
 
             AllNodes.Add(node.UserID, node);
             //FlatGraph.addNode(node);
@@ -56,9 +81,11 @@ namespace AR.Core.Graph
         }
         public void DeleteNode(String UserID)
         {
-            var node = GetNode(UserID);
-
-            Destroy(node.myARObject);
+             DeleteNode( GetNode(UserID));
+        }
+        public void DeleteNode(Node node)
+        {
+            DestroyImmediate(node.gameObject);
 
             foreach (var ed in node.EdgesIn)
             {
@@ -70,12 +97,28 @@ namespace AR.Core.Graph
             }
 
             //FlatGraph.deleteNodes(node);
-            AllNodes.Remove(UserID);
+            AllNodes.Remove(node.UserID);
         }
         public Node GetNode(String UserID)
         {
-            return AllNodes[UserID];
+
+            foreach (Node n in AllNodes.Values)
+            {
+                if (n.Label == UserID)
+                {
+                    return n;
+                }
+            }
+
+            return null;
+
+
+            /*if (AllNodes.ContainsKey(UserID))
+                return AllNodes[UserID];
+            else
+                return null;*/
         }
+
         public List<Node> GetNodes(List<String> UserIDS)
         {
             var retList = new List<Node>();
@@ -119,12 +162,18 @@ namespace AR.Core.Graph
         }
         public void DeleteEdges(UInt32 ID)
         {
-            var edge = getEdge(ID);
-            edge.EndNode.EdgesIn.Remove(ID);
-            edge.StartNode.EdgesOut.Remove(ID);
-            //FlatGraph.deleteEdges(edge);
-            AllEdges.Remove(ID);
+            DeleteEdges(getEdge(ID));
         }
+        public void DeleteEdges(Edge edge)
+        {
+            edge.EndNode.EdgesIn.Remove(edge.ID);
+            edge.StartNode.EdgesOut.Remove(edge.ID);
+            //FlatGraph.deleteEdges(edge);
+            AllEdges.Remove(edge.ID);
+            DestroyImmediate(edge.gameObject);
+
+        }
+
         public Edge getEdge(UInt32 ID)
         {
             return AllEdges[ID];
@@ -155,7 +204,6 @@ namespace AR.Core.Graph
         public void RandomMoveAllNodes(Boolean in2d)
         {
             myLogs.LogMessage(LoggingLevels.Verbose, "Starting NodeMovements", Module: "Graph.RandomMoveAllNodes", Version: "ALPHA");
-
             System.Random r = new System.Random((int)DateTime.Now.Ticks);
 
             foreach (Node Nodes in AllNodes.Values)
@@ -193,7 +241,8 @@ namespace AR.Core.Graph
                 //Move all nodes and rest
                 foreach (Node Nodes in AllNodes.Values)
                 {
-                    Nodes.myARObject.transform.position += Nodes.cuyrrentForceVector;
+                    Nodes.MoveDelta(Nodes.cuyrrentForceVector);
+                    //Nodes.myARObject.transform.position += Nodes.cuyrrentForceVector;
                     Nodes.cuyrrentForceVector = new Vector3(0, 0, 0);
                 }
             }
@@ -247,13 +296,18 @@ namespace AR.Core.Graph
                     continue;
                 }
 
-                n.ChangeNodeColor(Visuals.Colors.Green_P25);
+
+                n.HideNode();
+                foreach (Edge e in n.EdgesIn.Values)
+                    e.HideEdge();
+                foreach (Edge e in n.EdgesOut.Values)
+                    e.HideEdge();
+
+                /*n.ChangeNodeColor(Visuals.Colors.Green_P25);
                 foreach (Edge e in n.EdgesIn.Values)
                     e.ChangeEdgeColor(Visuals.Colors.Blue_P25);
                 foreach (Edge e in n.EdgesOut.Values)
-                    e.ChangeEdgeColor(Visuals.Colors.Blue_P25);
-
-
+                    e.ChangeEdgeColor(Visuals.Colors.Blue_P25);*/
             }
 
 
@@ -266,19 +320,17 @@ namespace AR.Core.Graph
             {
 
                 n.ChangeNodeColor(Visuals.Colors.Blue);
-              
+                n.ShowNode();
             }
 
             foreach (Edge e in AllEdges.Values)
             {
 
                 e.ChangeEdgeColor(Visuals.Colors.Green);
-
+                e.ShowEdge();
             }
 
         }
-
-
 
         /// <summary>
         /// DEPRICATED IMPLEMENTED IN NODE MOVEMENTS
@@ -292,28 +344,186 @@ namespace AR.Core.Graph
 
         }
 
-        //TODO implement graph traversal DFS, BFS, etc...
+        public void ReloadGraph(GraphTypes gt )
+        {
+            RaiseFeedback("Has not been implemented yet");
 
+
+
+            //Remove all nodes and edges, wipe lists and reload
+            foreach (Edge e in AllEdges.Values)
+            {
+                e.gameObject.SetActive(false);
+                //DestroyImmediate(e.gameObject);
+            }
+            foreach (Node n in AllNodes.Values)
+            {
+                n.gameObject.SetActive(false);
+                //DestroyImmediate(n.gameObject);
+            }
+            this.AllEdges = new Dictionary<uint, Edge>();
+            this.AllNodes = new Dictionary<string, Node>();
+            switch (gt)
+            {
+                case GraphTypes.Neo4jLocal:
+                    AR.Core.Communications.Neo4jConnector.getInstance().GetGraphFromQuery(this, "MATCH p=()-[r:ORDERS]->() RETURN p LIMIT 100");
+                    break;
+                case GraphTypes.Simple:
+                    AR.Core.Communications.GraphMLGraphFactory.GetGraphFromURL(this, AR.Core.Types.GraphConfiguration.URL_SIMPLEGRAPH);
+                    break;
+                case GraphTypes.Sample:
+                    AR.Core.Communications.GraphMLGraphFactory.GetGraphFromURL(this, AR.Core.Types.GraphConfiguration.URL_SAMPLEGRAPH);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        //TODO implement graph traversal DFS, BFS, etc...
+        private void DFSVisit(Node node)
+        {
+            node.isVisited = true;
+
+            foreach (var e in node.EdgesOut)
+            {
+                var edge = e.Value;
+
+                if (edge.EndNode.isVisited)
+                    continue;
+
+                edge.EndNode.isVisited = true;
+
+                //change color slowly here
+                EnumeratorRunning = true;
+                StartCoroutine(ChangeNodeColorWait(edge)); //Change Color and delay a little for effect
+                StartCoroutine(BlockOn()); //wait until first Coroutine stops then continue
+
+
+                DFSVisit(edge.EndNode);
+            }
+        }
+        public void BFS()
+        {
+
+            //reset all nodes to not visited
+            foreach (var n in AllNodes)
+            {
+                n.Value.isVisited = false;
+                n.Value.ChangeNodeColor(Visuals.Colors.Black);
+                n.Value.HideNode();
+            }
+            foreach (var e in AllEdges)
+            {
+                e.Value.HideEdge();
+                e.Value.HideEdge();
+                e.Value.ChangeEdgeColor(Visuals.Colors.Black);
+
+            }
+
+
+
+            var node = AllNodes.First().Value;
+            StartCoroutine(BreadthFirstSearchNodeVisit(node));
+
+            /*foreach (var n in AllNodes)
+            {
+                if (!n.Value.isVisited)
+                    StartCoroutine(DepthFirstSearchNodeVisit(n.Value));
+                    //DFSVisit(n.Value);
+            }*/
+        }
+        public IEnumerator BreadthFirstSearchNodeVisit(Node node)
+        {
+            node.isVisited = true;
+            yield return new WaitForSeconds(2.0f);
+            node.ChangeNodeColor(Visuals.Colors.Red);
+            node.ShowNode();
+            foreach (var e in node.EdgesOut)
+            {
+                var edge = e.Value;
+
+                if (edge.EndNode.isVisited)
+                    continue;
+
+                StartCoroutine(BreadthFirstSearchNodeVisit(edge.EndNode));
+                edge.ChangeEdgeColor(Visuals.Colors.Yellow);
+                edge.ShowEdge();
+            }
+        }
+
+        public void DFS()
+        {
+
+            //reset all nodes to not visited
+            foreach (var n in AllNodes)
+            {
+                n.Value.isVisited = false;
+                n.Value.ChangeNodeColor(Visuals.Colors.Black);
+                n.Value.HideNode();
+            }
+            foreach (var e in AllEdges)
+            {
+                e.Value.HideEdge();
+                e.Value.HideEdge();
+                e.Value.ChangeEdgeColor(Visuals.Colors.Black);
+
+            }
+            var node = AllNodes.First().Value;
+            StartCoroutine(DepthFirstSearchNodeVisit(node));
+        }
+        public IEnumerator DepthFirstSearchNodeVisit(Node node)
+        {
+            node.isVisited = true;
+            yield return new WaitForSeconds(2.0f);
+            node.ChangeNodeColor(Visuals.Colors.Red);
+            node.ShowNode();
+            foreach (var e in node.EdgesOut)
+            {
+                var edge = e.Value;
+
+                if (!edge.EndNode.isVisited)
+                    StartCoroutine(DepthFirstSearchNodeVisit(edge.EndNode));
+
+
+                edge.ChangeEdgeColor(Visuals.Colors.Yellow);
+                edge.ShowEdge();
+            }
+        }
 
         //Monobehavior methods below
-
-
         private void Awake()
         {
             myLogs.LogMessage(LoggingLevels.Verbose, "Awake Graph Method Called", Module: "Graph.Awake", Version: "ALPHA");
 
+            //Start the speech Engine here
+            mySpeechEngine = this.gameObject.AddComponent<Speech.SpeechProcessing>();
+            mySpeechEngine.m_graph = this;
+            myInteractibleManager = this.gameObject.AddComponent<ARTouch.InteractibleManager>(); ; //singleton access pattern
+            myInteractibleManager.m_graph = this;
+            myGestureManager = this.gameObject.AddComponent<ARTouch.GestureManager>(); ; //singleton access pattern
+            myGestureManager.m_graph = this;
+
+
+            try
+            {
+
+                myLogs.LogMessage(LoggingLevels.Verbose, "Graph Init Speach OKAY" , Module: "Graph.Awake", Version: "ALPHA");
+            }
+            catch (Exception exp)
+            {
+                myLogs.LogMessage(LoggingLevels.Verbose, "Graph Init Speach ERRPR" + exp.Message, Module: "Graph.Awake", Version: "ALPHA");
+            }
+
+
+
+           
         }
 
         // Use this for initialization
         void Start()
         {
             myLogs.LogMessage(LoggingLevels.Verbose, "Start Graph Method Called", Module: "Graph.Start", Version: "ALPHA");
-            RandomMoveAllNodes(false);
-
-
-            //Start the speech Engine here
-            mySpeechEngine = this.gameObject.AddComponent<Speech.SpeechProcessing>();
-            mySpeechEngine.m_graph = this;
+            //RandomMoveAllNodes(false);
 
         }
 
@@ -325,6 +535,24 @@ namespace AR.Core.Graph
 
         }
 
+        //IEnumerator for moving and changing things
+
+        Boolean EnumeratorRunning;
+        IEnumerator ChangeNodeColorWait(Edge edge)
+        {
+            print("changing color " + edge.ID.ToString());
+            edge.EndNode.ChangeNodeColor(Visuals.Colors.Red);
+            yield return new WaitForSeconds(5.0f);
+            EnumeratorRunning = false;
+            print("changing color done after delay " + edge.ID.ToString());
+
+        }
+        IEnumerator BlockOn()
+        {
+            while (EnumeratorRunning)
+                yield return new WaitForSeconds(.1f);
+            print("unblocked and moving on");
+        }
 
     }
 

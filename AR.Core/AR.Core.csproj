@@ -67,18 +67,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ARTouch\CursorManager.cs" />
+    <Compile Include="ARTouch\GazeManager.cs" />
+    <Compile Include="ARTouch\GazeStabilizer.cs" />
+    <Compile Include="ARTouch\GestureManager.cs" />
+    <Compile Include="ARTouch\Interactible.cs" />
+    <Compile Include="ARTouch\InteractibleManager.cs" />
+    <Compile Include="ARTouch\Singleton.cs" />
     <Compile Include="Communications\GraphMLLoader.cs" />
+    <Compile Include="Communications\Neo4jConnector.cs" />
     <Compile Include="Graph\Edge.cs" />
     <Compile Include="Graph\Globals.cs" />
     <Compile Include="Graph\Graph.cs" />
     <Compile Include="Graph\GraphHelperFunctions.cs" />
     <Compile Include="Graph\GraphSqlite.cs" />
     <Compile Include="Graph\Node.cs" />
+    <Compile Include="IO\SimpleJson.cs" />
     <Compile Include="IO\FileWrite.cs" />
     <Compile Include="Logging\DBLogger.cs" />
     <Compile Include="Speech\SpeechProcessing.cs" />
     <Compile Include="Types\AREnums.cs" />
+    <Compile Include="Types\CustomEventHandler.cs" />
     <Compile Include="Types\GraphConfiguration.cs" />
+    <Compile Include="Types\HelpingFunctions.cs" />
+    <Compile Include="Types\Neo4jGraph.cs" />
     <Compile Include="Types\SpringFoceTypes.cs" />
     <Compile Include="Types\SystemSetup.cs" />
     <Compile Include="UnityVisualProperties.cs" />
@@ -86,6 +98,8 @@
     <Compile Include="Visuals\BaseShapeFactory.cs" />
     <Compile Include="Visuals\Colors.cs" />
     <Compile Include="Visuals\UnityHelperFunctions.cs" />
+    <Compile Include="Voice\TextToSpeechManager.cs" />
+    <Compile Include="Voice\VoiceManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -93,11 +107,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SampleData\neo4j.Sample.Output.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="SQL Scripts\PostgresCreateTableScripts.sql" />
+    <Content Include="UnitySetup.txt" />
     <Content Include="Todo.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ARTouch\" />
     <Folder Include="HUD\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

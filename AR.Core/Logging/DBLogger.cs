@@ -5,6 +5,7 @@ using System.Text;
 using Npgsql;
 using AR.Core.Types;
 using UnityEngine.Networking;
+using UnityEngine;
 
 namespace AR.Core.Logging
 {
@@ -59,7 +60,7 @@ namespace AR.Core.Logging
 
     }
 #else
-    public class DBLogger
+    public class DBLogger : MonoBehaviour
     {
         private String PostURL = "http://" + SystemSetup.DBLog_Server + ":3000/logs"; 
 
@@ -76,8 +77,20 @@ namespace AR.Core.Logging
 
         public Boolean LogMessage(LoggingLevels loglevel, String Message, String Module = "", String Version = "")
         {
+
+            if (SystemSetup.ENABLE_PRINT_LOGGING)
+                print(Message);
+
+
+            //don't post remote logs if running in prod only for debugging
+            if (!SystemSetup.ENABLE_REMOTE_LOGGING)
+                return true;
+
             try
             {
+                
+
+
                 Dictionary<String, String> myLoad = new Dictionary<string, string>();
                 myLoad.Add("level", loglevel.ToString());
                 myLoad.Add("module", Module);

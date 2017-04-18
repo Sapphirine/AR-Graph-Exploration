@@ -8,7 +8,7 @@ namespace AR.Core.Types
     public static class GraphConfiguration
     {
  
-        public static BoundryScale plotScale = BoundryScale.Room;
+        public static BoundryScale plotScale = BoundryScale.Normal;
         public static float scaleFactor
         {
             get

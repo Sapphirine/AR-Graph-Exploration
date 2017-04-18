@@ -8,6 +8,7 @@ using ARTypes = AR.Core.Types;
 
 namespace AR.Core.Graph
 {
+
     public class Edge : MonoBehaviour
     {
         private Logging.DBLogger myLogs;
@@ -19,6 +20,8 @@ namespace AR.Core.Graph
         public Node EndNode { get; set; }
 
         public GameObject myARObject { get; set; }
+
+        public String Neo4jPath { get; set; }
 
         public Edge()
         {
@@ -56,7 +59,7 @@ namespace AR.Core.Graph
         }
         public Edge ChangeEdgeColor(Color c)
         {
-            myARObject.GetComponent<MeshRenderer>().material.color = c;
+            myARObject.GetComponent<MeshRenderer>().material.color = c;          
             return this;
         }
         public Edge ChangeEdgeTransparency(float Transparency)
@@ -66,6 +69,16 @@ namespace AR.Core.Graph
             myARObject.GetComponent<MeshRenderer>().material.color = curColor;
             myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Changed Transparency to (a):" + myARObject.GetComponent<MeshRenderer>().material.color.a.ToString(), Module: "Edge.ChangeEdgeTransparency", Version: "ALPHA");
 
+            return this;
+        }
+        public Edge HideEdge()
+        {
+            myARObject.GetComponent<MeshRenderer>().enabled = false;
+            return this;
+        }
+        public Edge ShowEdge()
+        {
+            myARObject.GetComponent<MeshRenderer>().enabled = true;
             return this;
         }
 
@@ -107,6 +120,13 @@ namespace AR.Core.Graph
 
         private void Update()
         {
+
+        }
+
+        void GazeEntered()
+        {
+
+            myLogs.LogMessage(AR.Core.Types.LoggingLevels.Verbose, "Edge has GazeEntered", Module: "Edge.GazeEntered", Version: "ALPHA");
 
         }
 

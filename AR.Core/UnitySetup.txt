@@ -1,0 +1,13 @@
+﻿Setup Empty object Managers 
+	Add Cursor Object
+	Add Gaze Manager, Gaze Stabilizer, TexttoSpeechManager, and Cursor Manger
+		Connect Audio Source;
+	Add Cursor Manager
+		Connect cursor object to cursor manager
+	Add GameObject (Call this anything you want)
+		Connect init scrip to call graph libraries similar to Fractal.cs shows
+	Add Audto Source as Child to Main Camera
+		Position it at x:0, y:.6 Z: 0
+		Spatial Blend 3d leave all other setting as default
+
+			
