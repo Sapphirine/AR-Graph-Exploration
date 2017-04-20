@@ -88,9 +88,8 @@ namespace AR.Core.Logging
 
             try
             {
-                
 
-
+      
                 Dictionary<String, String> myLoad = new Dictionary<string, string>();
                 myLoad.Add("level", loglevel.ToString());
                 myLoad.Add("module", Module);

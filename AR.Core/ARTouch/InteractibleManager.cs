@@ -76,7 +76,7 @@ namespace AR.Core.Graph.ARTouch
 
                 if (m_graph != null)
                 {
-                    return;
+                    return; // now handled in gesture manager
                     var test = "";
                     var GOName = FocusedGameObject.name;
                     if (GOName.Contains("Node"))
