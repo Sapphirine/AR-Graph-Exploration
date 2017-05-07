@@ -105,8 +105,11 @@
     <None Include="App.config" />
     <EmbeddedResource Include="SampleData\mixed.species_brain_1.graphml" />
     <None Include="packages.config" />
+    <None Include="SampleData\Test.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SampleData\FinalDataSample.json" />
+    <None Include="SampleData\MilestoneIIISample.json" />
     <None Include="SampleData\neo4j.Sample.Output.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

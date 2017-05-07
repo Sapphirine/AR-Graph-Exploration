@@ -1,0 +1,2893 @@
+﻿{
+  "results": [
+    {
+      "columns": [
+        "p",
+        "t",
+        "p2",
+        "t2"
+      ],
+      "data": [
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "MOORE",
+              "zipCode": "06511",
+              "gender": "F",
+              "licenseState": "FL",
+              "city": "NEW HAVEN",
+              "typeCode": "1",
+              "firstName": "BARBARA",
+              "phoneNumber": "2036064767",
+              "stateName": "CT",
+              "addressLine1": "1294 CHAPEL STREET",
+              "middleName": "C",
+              "licenseNumber": "CAP 3349",
+              "crediantial": "LCSW"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101Y00000X",
+              "lastName": "VILLAFUERTE",
+              "firstName": "JOSE",
+              "zipCode": "065115362",
+              "phoneNumber": "4754221819",
+              "gender": "M",
+              "city": "NEW HAVEN",
+              "stateName": "CT",
+              "addressLine1": "628 GEORGE ST",
+              "crediantial": "LCSW, LMSW",
+              "typeCode": "1"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            }
+          ],
+          "meta": [
+            {
+              "id": 2992869,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 3926651,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "3926651",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "lastName": "VILLAFUERTE",
+                  "firstName": "JOSE",
+                  "zipCode": "065115362",
+                  "phoneNumber": "4754221819",
+                  "gender": "M",
+                  "city": "NEW HAVEN",
+                  "stateName": "CT",
+                  "addressLine1": "628 GEORGE ST",
+                  "crediantial": "LCSW, LMSW",
+                  "typeCode": "1"
+                }
+              },
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2992869",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "MOORE",
+                  "zipCode": "06511",
+                  "gender": "F",
+                  "licenseState": "FL",
+                  "city": "NEW HAVEN",
+                  "typeCode": "1",
+                  "firstName": "BARBARA",
+                  "phoneNumber": "2036064767",
+                  "stateName": "CT",
+                  "addressLine1": "1294 CHAPEL STREET",
+                  "middleName": "C",
+                  "licenseNumber": "CAP 3349",
+                  "crediantial": "LCSW"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "IZNEROWICZ",
+              "zipCode": "826093345",
+              "gender": "F",
+              "licenseState": "WY",
+              "city": "CASPER",
+              "typeCode": "1",
+              "firstName": "ALICJA",
+              "phoneNumber": "3072336000",
+              "stateName": "WY",
+              "addressLine1": "5000 BLACKMORE RD",
+              "middleName": "KINGA",
+              "licenseNumber": "LCSW #637",
+              "crediantial": "LCSW"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101Y00000X",
+              "lastName": "FARRER",
+              "zipCode": "826093345",
+              "gender": "M",
+              "licenseState": "WY",
+              "city": "CASPER",
+              "typeCode": "1",
+              "firstName": "DANIEL",
+              "phoneNumber": "3072336000",
+              "stateName": "WY",
+              "addressLine1": "5000 BLACKMORE RD",
+              "middleName": "EVERETT",
+              "licenseNumber": "LPC-1435",
+              "crediantial": "LPC"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            }
+          ],
+          "meta": [
+            {
+              "id": 2709420,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 3758943,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2709420",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "IZNEROWICZ",
+                  "zipCode": "826093345",
+                  "gender": "F",
+                  "licenseState": "WY",
+                  "city": "CASPER",
+                  "typeCode": "1",
+                  "firstName": "ALICJA",
+                  "phoneNumber": "3072336000",
+                  "stateName": "WY",
+                  "addressLine1": "5000 BLACKMORE RD",
+                  "middleName": "KINGA",
+                  "licenseNumber": "LCSW #637",
+                  "crediantial": "LCSW"
+                }
+              },
+              {
+                "id": "3758943",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "lastName": "FARRER",
+                  "zipCode": "826093345",
+                  "gender": "M",
+                  "licenseState": "WY",
+                  "city": "CASPER",
+                  "typeCode": "1",
+                  "firstName": "DANIEL",
+                  "phoneNumber": "3072336000",
+                  "stateName": "WY",
+                  "addressLine1": "5000 BLACKMORE RD",
+                  "middleName": "EVERETT",
+                  "licenseNumber": "LPC-1435",
+                  "crediantial": "LPC"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "CLARK",
+              "zipCode": "282056344",
+              "gender": "F",
+              "licenseState": "NC",
+              "city": "CHARLOTTE",
+              "typeCode": "1",
+              "firstName": "SHARON",
+              "phoneNumber": "7044887514",
+              "stateName": "NC",
+              "addressLine1": "1036 WESTCHESTER BLVD",
+              "middleName": "L",
+              "licenseNumber": "C005263",
+              "crediantial": "MSW, LCSW"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101Y00000X",
+              "zipCode": "402021423",
+              "phoneNumber": "5025898600",
+              "city": "LOUISVILLE",
+              "stateName": "KY",
+              "businessName": "SEVEN COUNTIES SERVICES, INC.",
+              "addressLine1": "101 W MUHAMMAD ALI BLVD",
+              "typeCode": "2"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            }
+          ],
+          "meta": [
+            {
+              "id": 1275860,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 701000,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "701000",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "zipCode": "402021423",
+                  "phoneNumber": "5025898600",
+                  "city": "LOUISVILLE",
+                  "stateName": "KY",
+                  "businessName": "SEVEN COUNTIES SERVICES, INC.",
+                  "addressLine1": "101 W MUHAMMAD ALI BLVD",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "1275860",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "CLARK",
+                  "zipCode": "282056344",
+                  "gender": "F",
+                  "licenseState": "NC",
+                  "city": "CHARLOTTE",
+                  "typeCode": "1",
+                  "firstName": "SHARON",
+                  "phoneNumber": "7044887514",
+                  "stateName": "NC",
+                  "addressLine1": "1036 WESTCHESTER BLVD",
+                  "middleName": "L",
+                  "licenseNumber": "C005263",
+                  "crediantial": "MSW, LCSW"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "FEDDERS",
+              "zipCode": "452023604",
+              "gender": "M",
+              "licenseState": "OH",
+              "city": "CINCINNATI",
+              "typeCode": "1",
+              "firstName": "DAVID",
+              "phoneNumber": "5137230390",
+              "stateName": "OH",
+              "addressLine1": "1 W 4TH ST",
+              "middleName": "LEO",
+              "licenseNumber": "034451",
+              "adressLine2": "RM 2250",
+              "crediantial": "MD"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101Y00000X",
+              "lastName": "EVERETT",
+              "zipCode": "321647452",
+              "gender": "F",
+              "licenseState": "IN",
+              "city": "PALM COAST",
+              "typeCode": "1",
+              "firstName": "JEANNINE",
+              "phoneNumber": "2399365250",
+              "stateName": "FL",
+              "addressLine1": "43 BARKLEY CIR",
+              "middleName": "LOUISE",
+              "licenseNumber": "28140609A",
+              "adressLine2": "STE. 201",
+              "crediantial": "ARNP"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            }
+          ],
+          "meta": [
+            {
+              "id": 1034550,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 68498,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "68498",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "lastName": "EVERETT",
+                  "zipCode": "321647452",
+                  "gender": "F",
+                  "licenseState": "IN",
+                  "city": "PALM COAST",
+                  "typeCode": "1",
+                  "firstName": "JEANNINE",
+                  "phoneNumber": "2399365250",
+                  "stateName": "FL",
+                  "addressLine1": "43 BARKLEY CIR",
+                  "middleName": "LOUISE",
+                  "licenseNumber": "28140609A",
+                  "adressLine2": "STE. 201",
+                  "crediantial": "ARNP"
+                }
+              },
+              {
+                "id": "1034550",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "FEDDERS",
+                  "zipCode": "452023604",
+                  "gender": "M",
+                  "licenseState": "OH",
+                  "city": "CINCINNATI",
+                  "typeCode": "1",
+                  "firstName": "DAVID",
+                  "phoneNumber": "5137230390",
+                  "stateName": "OH",
+                  "addressLine1": "1 W 4TH ST",
+                  "middleName": "LEO",
+                  "licenseNumber": "034451",
+                  "adressLine2": "RM 2250",
+                  "crediantial": "MD"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "030603924",
+              "phoneNumber": "6038831626",
+              "city": "NASHUA",
+              "stateName": "NH",
+              "businessName": "LAMPREY HEALTH CARE INC",
+              "addressLine1": "22 PROSPECT ST",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "038781543",
+              "phoneNumber": "6036923166",
+              "city": "SOMERSWORTH",
+              "stateName": "NH",
+              "businessName": "PINEWOOD PROFESSIONALS, LLC",
+              "addressLine1": "255 ROUTE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 945023,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 3849449,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "945023",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "030603924",
+                  "phoneNumber": "6038831626",
+                  "city": "NASHUA",
+                  "stateName": "NH",
+                  "businessName": "LAMPREY HEALTH CARE INC",
+                  "addressLine1": "22 PROSPECT ST",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3849449",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "038781543",
+                  "phoneNumber": "6036923166",
+                  "city": "SOMERSWORTH",
+                  "stateName": "NH",
+                  "businessName": "PINEWOOD PROFESSIONALS, LLC",
+                  "addressLine1": "255 ROUTE 108",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "030771220",
+              "phoneNumber": "6038953351",
+              "city": "RAYMOND",
+              "stateName": "NH",
+              "businessName": "LAMPREY HEALTH CARE INC",
+              "addressLine1": "128 ROUTE 27",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "038781543",
+              "phoneNumber": "6036923166",
+              "city": "SOMERSWORTH",
+              "stateName": "NH",
+              "businessName": "PINEWOOD PROFESSIONALS, LLC",
+              "addressLine1": "255 ROUTE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 946702,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 3849449,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "946702",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "030771220",
+                  "phoneNumber": "6038953351",
+                  "city": "RAYMOND",
+                  "stateName": "NH",
+                  "businessName": "LAMPREY HEALTH CARE INC",
+                  "addressLine1": "128 ROUTE 27",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3849449",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "038781543",
+                  "phoneNumber": "6036923166",
+                  "city": "SOMERSWORTH",
+                  "stateName": "NH",
+                  "businessName": "PINEWOOD PROFESSIONALS, LLC",
+                  "addressLine1": "255 ROUTE 108",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "038571843",
+              "phoneNumber": "6036592494",
+              "city": "NEWMARKET",
+              "stateName": "NH",
+              "businessName": "LAMPREY HEALTH CARE INC",
+              "addressLine1": "207 S MAIN ST",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "038781543",
+              "phoneNumber": "6036923166",
+              "city": "SOMERSWORTH",
+              "stateName": "NH",
+              "businessName": "PINEWOOD PROFESSIONALS, LLC",
+              "addressLine1": "255 ROUTE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 507562,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 3849449,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3849449",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "038781543",
+                  "phoneNumber": "6036923166",
+                  "city": "SOMERSWORTH",
+                  "stateName": "NH",
+                  "businessName": "PINEWOOD PROFESSIONALS, LLC",
+                  "addressLine1": "255 ROUTE 108",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "507562",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "038571843",
+                  "phoneNumber": "6036592494",
+                  "city": "NEWMARKET",
+                  "stateName": "NH",
+                  "businessName": "LAMPREY HEALTH CARE INC",
+                  "addressLine1": "207 S MAIN ST",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "GRAHS",
+              "zipCode": "67601",
+              "gender": "M",
+              "licenseState": "KS",
+              "city": "HAYS",
+              "typeCode": "1",
+              "firstName": "CARL",
+              "phoneNumber": "7856282871",
+              "stateName": "KS",
+              "addressLine1": "208 E 7TH STREET",
+              "middleName": "EDWARD",
+              "licenseNumber": "LP577",
+              "crediantial": "EDD"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "YATES",
+              "zipCode": "676012461",
+              "gender": "M",
+              "licenseState": "KS",
+              "city": "HAYS",
+              "typeCode": "1",
+              "firstName": "ROBERT",
+              "phoneNumber": "7856214417",
+              "stateName": "KS",
+              "addressLine1": "1010 DOWNING AVE STE 60",
+              "middleName": "D",
+              "licenseNumber": "572",
+              "crediantial": "PH.D"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 1513785,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 3716064,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3716064",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "YATES",
+                  "zipCode": "676012461",
+                  "gender": "M",
+                  "licenseState": "KS",
+                  "city": "HAYS",
+                  "typeCode": "1",
+                  "firstName": "ROBERT",
+                  "phoneNumber": "7856214417",
+                  "stateName": "KS",
+                  "addressLine1": "1010 DOWNING AVE STE 60",
+                  "middleName": "D",
+                  "licenseNumber": "572",
+                  "crediantial": "PH.D"
+                }
+              },
+              {
+                "id": "1513785",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "GRAHS",
+                  "zipCode": "67601",
+                  "gender": "M",
+                  "licenseState": "KS",
+                  "city": "HAYS",
+                  "typeCode": "1",
+                  "firstName": "CARL",
+                  "phoneNumber": "7856282871",
+                  "stateName": "KS",
+                  "addressLine1": "208 E 7TH STREET",
+                  "middleName": "EDWARD",
+                  "licenseNumber": "LP577",
+                  "crediantial": "EDD"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101Y00000X",
+              "lastName": "VILLAFUERTE",
+              "firstName": "JOSE",
+              "zipCode": "065115362",
+              "phoneNumber": "4754221819",
+              "gender": "M",
+              "city": "NEW HAVEN",
+              "stateName": "CT",
+              "addressLine1": "628 GEORGE ST",
+              "crediantial": "LCSW, LMSW",
+              "typeCode": "1"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "MOORE",
+              "zipCode": "06511",
+              "gender": "F",
+              "licenseState": "FL",
+              "city": "NEW HAVEN",
+              "typeCode": "1",
+              "firstName": "BARBARA",
+              "phoneNumber": "2036064767",
+              "stateName": "CT",
+              "addressLine1": "1294 CHAPEL STREET",
+              "middleName": "C",
+              "licenseNumber": "CAP 3349",
+              "crediantial": "LCSW"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 3926651,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2992869,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "3926651",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "lastName": "VILLAFUERTE",
+                  "firstName": "JOSE",
+                  "zipCode": "065115362",
+                  "phoneNumber": "4754221819",
+                  "gender": "M",
+                  "city": "NEW HAVEN",
+                  "stateName": "CT",
+                  "addressLine1": "628 GEORGE ST",
+                  "crediantial": "LCSW, LMSW",
+                  "typeCode": "1"
+                }
+              },
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2992869",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "MOORE",
+                  "zipCode": "06511",
+                  "gender": "F",
+                  "licenseState": "FL",
+                  "city": "NEW HAVEN",
+                  "typeCode": "1",
+                  "firstName": "BARBARA",
+                  "phoneNumber": "2036064767",
+                  "stateName": "CT",
+                  "addressLine1": "1294 CHAPEL STREET",
+                  "middleName": "C",
+                  "licenseNumber": "CAP 3349",
+                  "crediantial": "LCSW"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "GILL",
+              "zipCode": "483161819",
+              "gender": "F",
+              "licenseState": "MI",
+              "city": "SHELBY TOWNSHIP",
+              "typeCode": "1",
+              "firstName": "DIANE",
+              "phoneNumber": "5867818400",
+              "stateName": "MI",
+              "addressLine1": "53950 VAN DYKE AVE",
+              "middleName": "KAY",
+              "licenseNumber": "6801058676",
+              "adressLine2": "SUITE 210B",
+              "crediantial": "LMSW"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "KUBIAK",
+              "zipCode": "481742174",
+              "gender": "M",
+              "licenseState": "MI",
+              "city": "ROMULUS",
+              "typeCode": "1",
+              "firstName": "MICHAEL",
+              "phoneNumber": "7347210900",
+              "stateName": "MI",
+              "addressLine1": "7845 MIDDLEBELT RD",
+              "middleName": "JOSEPH",
+              "licenseNumber": "1-00980",
+              "adressLine2": "SUITE 201",
+              "crediantial": "MA, MSW, CAAC"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 1336843,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2406948,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "2406948",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "KUBIAK",
+                  "zipCode": "481742174",
+                  "gender": "M",
+                  "licenseState": "MI",
+                  "city": "ROMULUS",
+                  "typeCode": "1",
+                  "firstName": "MICHAEL",
+                  "phoneNumber": "7347210900",
+                  "stateName": "MI",
+                  "addressLine1": "7845 MIDDLEBELT RD",
+                  "middleName": "JOSEPH",
+                  "licenseNumber": "1-00980",
+                  "adressLine2": "SUITE 201",
+                  "crediantial": "MA, MSW, CAAC"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "1336843",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "GILL",
+                  "zipCode": "483161819",
+                  "gender": "F",
+                  "licenseState": "MI",
+                  "city": "SHELBY TOWNSHIP",
+                  "typeCode": "1",
+                  "firstName": "DIANE",
+                  "phoneNumber": "5867818400",
+                  "stateName": "MI",
+                  "addressLine1": "53950 VAN DYKE AVE",
+                  "middleName": "KAY",
+                  "licenseNumber": "6801058676",
+                  "adressLine2": "SUITE 210B",
+                  "crediantial": "LMSW"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "OIKEMUS",
+              "zipCode": "01420",
+              "gender": "M",
+              "licenseState": "MA",
+              "city": "FITCHBURG",
+              "typeCode": "1",
+              "firstName": "DAVID",
+              "phoneNumber": "9788788516",
+              "stateName": "MA",
+              "addressLine1": "175 CONNORS STREET",
+              "middleName": "ANDREW",
+              "licenseNumber": "957",
+              "crediantial": "LMHC"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "GRIFFIN",
+              "zipCode": "014403879",
+              "gender": "M",
+              "licenseState": "MA",
+              "city": "GARDNER",
+              "typeCode": "1",
+              "firstName": "WILLIAM",
+              "phoneNumber": "9786329400",
+              "stateName": "MA",
+              "addressLine1": "31 LAKE ST",
+              "middleName": "M",
+              "licenseNumber": "124435",
+              "adressLine2": "NORTH CENTRAL HUMAN SERVICES",
+              "crediantial": "RNCS PC APRN BC"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 1262114,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 997337,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1262114",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "OIKEMUS",
+                  "zipCode": "01420",
+                  "gender": "M",
+                  "licenseState": "MA",
+                  "city": "FITCHBURG",
+                  "typeCode": "1",
+                  "firstName": "DAVID",
+                  "phoneNumber": "9788788516",
+                  "stateName": "MA",
+                  "addressLine1": "175 CONNORS STREET",
+                  "middleName": "ANDREW",
+                  "licenseNumber": "957",
+                  "crediantial": "LMHC"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "997337",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "GRIFFIN",
+                  "zipCode": "014403879",
+                  "gender": "M",
+                  "licenseState": "MA",
+                  "city": "GARDNER",
+                  "typeCode": "1",
+                  "firstName": "WILLIAM",
+                  "phoneNumber": "9786329400",
+                  "stateName": "MA",
+                  "addressLine1": "31 LAKE ST",
+                  "middleName": "M",
+                  "licenseNumber": "124435",
+                  "adressLine2": "NORTH CENTRAL HUMAN SERVICES",
+                  "crediantial": "RNCS PC APRN BC"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "532042712",
+              "phoneNumber": "4146726220",
+              "city": "MILWAUKEE",
+              "stateName": "WI",
+              "businessName": "SIXTEENTH STREET COMMUNITY HEALTH CENTERS, INC.",
+              "addressLine1": "2906 S 20TH ST",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "KLEMP",
+              "zipCode": "530456102",
+              "gender": "M",
+              "licenseState": "WI",
+              "city": "BROOKFIELD",
+              "typeCode": "1",
+              "firstName": "WILLIAM",
+              "phoneNumber": "2626419050",
+              "stateName": "WI",
+              "addressLine1": "5678 W BROWN DEER RD",
+              "licenseNumber": "1296",
+              "crediantial": "MSW, LCSW, CADC III"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 1734250,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 835480,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1734250",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "532042712",
+                  "phoneNumber": "4146726220",
+                  "city": "MILWAUKEE",
+                  "stateName": "WI",
+                  "businessName": "SIXTEENTH STREET COMMUNITY HEALTH CENTERS, INC.",
+                  "addressLine1": "2906 S 20TH ST",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "835480",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "KLEMP",
+                  "zipCode": "530456102",
+                  "gender": "M",
+                  "licenseState": "WI",
+                  "city": "BROOKFIELD",
+                  "typeCode": "1",
+                  "firstName": "WILLIAM",
+                  "phoneNumber": "2626419050",
+                  "stateName": "WI",
+                  "addressLine1": "5678 W BROWN DEER RD",
+                  "licenseNumber": "1296",
+                  "crediantial": "MSW, LCSW, CADC III"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "KLEMP",
+              "zipCode": "530456102",
+              "gender": "M",
+              "licenseState": "WI",
+              "city": "BROOKFIELD",
+              "typeCode": "1",
+              "firstName": "WILLIAM",
+              "phoneNumber": "2626419050",
+              "stateName": "WI",
+              "addressLine1": "5678 W BROWN DEER RD",
+              "licenseNumber": "1296",
+              "crediantial": "MSW, LCSW, CADC III"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "532042712",
+              "phoneNumber": "4146726220",
+              "city": "MILWAUKEE",
+              "stateName": "WI",
+              "businessName": "SIXTEENTH STREET COMMUNITY HEALTH CENTERS, INC.",
+              "addressLine1": "2906 S 20TH ST",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 835480,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1734250,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1734250",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "532042712",
+                  "phoneNumber": "4146726220",
+                  "city": "MILWAUKEE",
+                  "stateName": "WI",
+                  "businessName": "SIXTEENTH STREET COMMUNITY HEALTH CENTERS, INC.",
+                  "addressLine1": "2906 S 20TH ST",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "835480",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "KLEMP",
+                  "zipCode": "530456102",
+                  "gender": "M",
+                  "licenseState": "WI",
+                  "city": "BROOKFIELD",
+                  "typeCode": "1",
+                  "firstName": "WILLIAM",
+                  "phoneNumber": "2626419050",
+                  "stateName": "WI",
+                  "addressLine1": "5678 W BROWN DEER RD",
+                  "licenseNumber": "1296",
+                  "crediantial": "MSW, LCSW, CADC III"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101Y00000X",
+              "zipCode": "402021423",
+              "phoneNumber": "5025898600",
+              "city": "LOUISVILLE",
+              "stateName": "KY",
+              "businessName": "SEVEN COUNTIES SERVICES, INC.",
+              "addressLine1": "101 W MUHAMMAD ALI BLVD",
+              "typeCode": "2"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "CLARK",
+              "zipCode": "282056344",
+              "gender": "F",
+              "licenseState": "NC",
+              "city": "CHARLOTTE",
+              "typeCode": "1",
+              "firstName": "SHARON",
+              "phoneNumber": "7044887514",
+              "stateName": "NC",
+              "addressLine1": "1036 WESTCHESTER BLVD",
+              "middleName": "L",
+              "licenseNumber": "C005263",
+              "crediantial": "MSW, LCSW"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 701000,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1275860,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "701000",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "zipCode": "402021423",
+                  "phoneNumber": "5025898600",
+                  "city": "LOUISVILLE",
+                  "stateName": "KY",
+                  "businessName": "SEVEN COUNTIES SERVICES, INC.",
+                  "addressLine1": "101 W MUHAMMAD ALI BLVD",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "1275860",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "CLARK",
+                  "zipCode": "282056344",
+                  "gender": "F",
+                  "licenseState": "NC",
+                  "city": "CHARLOTTE",
+                  "typeCode": "1",
+                  "firstName": "SHARON",
+                  "phoneNumber": "7044887514",
+                  "stateName": "NC",
+                  "addressLine1": "1036 WESTCHESTER BLVD",
+                  "middleName": "L",
+                  "licenseNumber": "C005263",
+                  "crediantial": "MSW, LCSW"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "GRIFFIN",
+              "zipCode": "014403879",
+              "gender": "M",
+              "licenseState": "MA",
+              "city": "GARDNER",
+              "typeCode": "1",
+              "firstName": "WILLIAM",
+              "phoneNumber": "9786329400",
+              "stateName": "MA",
+              "addressLine1": "31 LAKE ST",
+              "middleName": "M",
+              "licenseNumber": "124435",
+              "adressLine2": "NORTH CENTRAL HUMAN SERVICES",
+              "crediantial": "RNCS PC APRN BC"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "OIKEMUS",
+              "zipCode": "01420",
+              "gender": "M",
+              "licenseState": "MA",
+              "city": "FITCHBURG",
+              "typeCode": "1",
+              "firstName": "DAVID",
+              "phoneNumber": "9788788516",
+              "stateName": "MA",
+              "addressLine1": "175 CONNORS STREET",
+              "middleName": "ANDREW",
+              "licenseNumber": "957",
+              "crediantial": "LMHC"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 997337,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1262114,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "1262114",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "OIKEMUS",
+                  "zipCode": "01420",
+                  "gender": "M",
+                  "licenseState": "MA",
+                  "city": "FITCHBURG",
+                  "typeCode": "1",
+                  "firstName": "DAVID",
+                  "phoneNumber": "9788788516",
+                  "stateName": "MA",
+                  "addressLine1": "175 CONNORS STREET",
+                  "middleName": "ANDREW",
+                  "licenseNumber": "957",
+                  "crediantial": "LMHC"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "997337",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "GRIFFIN",
+                  "zipCode": "014403879",
+                  "gender": "M",
+                  "licenseState": "MA",
+                  "city": "GARDNER",
+                  "typeCode": "1",
+                  "firstName": "WILLIAM",
+                  "phoneNumber": "9786329400",
+                  "stateName": "MA",
+                  "addressLine1": "31 LAKE ST",
+                  "middleName": "M",
+                  "licenseNumber": "124435",
+                  "adressLine2": "NORTH CENTRAL HUMAN SERVICES",
+                  "crediantial": "RNCS PC APRN BC"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101Y00000X",
+              "lastName": "EVERETT",
+              "zipCode": "321647452",
+              "gender": "F",
+              "licenseState": "IN",
+              "city": "PALM COAST",
+              "typeCode": "1",
+              "firstName": "JEANNINE",
+              "phoneNumber": "2399365250",
+              "stateName": "FL",
+              "addressLine1": "43 BARKLEY CIR",
+              "middleName": "LOUISE",
+              "licenseNumber": "28140609A",
+              "adressLine2": "STE. 201",
+              "crediantial": "ARNP"
+            },
+            {
+              "taxID": "101Y00000X",
+              "Classification": "Counselor",
+              "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+              "Grouping": "Behavioral Health & Social Service Providers",
+              "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "lastName": "FEDDERS",
+              "zipCode": "452023604",
+              "gender": "M",
+              "licenseState": "OH",
+              "city": "CINCINNATI",
+              "typeCode": "1",
+              "firstName": "DAVID",
+              "phoneNumber": "5137230390",
+              "stateName": "OH",
+              "addressLine1": "1 W 4TH ST",
+              "middleName": "LEO",
+              "licenseNumber": "034451",
+              "adressLine2": "RM 2250",
+              "crediantial": "MD"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 68498,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 0,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1034550,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "taxID": "101Y00000X",
+                  "Classification": "Counselor",
+                  "Definition": "A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master�s degree and clinical experience and supervision for licensure or certification.",
+                  "Grouping": "Behavioral Health & Social Service Providers",
+                  "Notes": "Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors."
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "68498",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101Y00000X",
+                  "lastName": "EVERETT",
+                  "zipCode": "321647452",
+                  "gender": "F",
+                  "licenseState": "IN",
+                  "city": "PALM COAST",
+                  "typeCode": "1",
+                  "firstName": "JEANNINE",
+                  "phoneNumber": "2399365250",
+                  "stateName": "FL",
+                  "addressLine1": "43 BARKLEY CIR",
+                  "middleName": "LOUISE",
+                  "licenseNumber": "28140609A",
+                  "adressLine2": "STE. 201",
+                  "crediantial": "ARNP"
+                }
+              },
+              {
+                "id": "1034550",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "lastName": "FEDDERS",
+                  "zipCode": "452023604",
+                  "gender": "M",
+                  "licenseState": "OH",
+                  "city": "CINCINNATI",
+                  "typeCode": "1",
+                  "firstName": "DAVID",
+                  "phoneNumber": "5137230390",
+                  "stateName": "OH",
+                  "addressLine1": "1 W 4TH ST",
+                  "middleName": "LEO",
+                  "licenseNumber": "034451",
+                  "adressLine2": "RM 2250",
+                  "crediantial": "MD"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "038781543",
+              "phoneNumber": "6036923166",
+              "city": "SOMERSWORTH",
+              "stateName": "NH",
+              "businessName": "PINEWOOD PROFESSIONALS, LLC",
+              "addressLine1": "255 ROUTE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "038571843",
+              "phoneNumber": "6036592494",
+              "city": "NEWMARKET",
+              "stateName": "NH",
+              "businessName": "LAMPREY HEALTH CARE INC",
+              "addressLine1": "207 S MAIN ST",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 3849449,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 507562,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3849449",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "038781543",
+                  "phoneNumber": "6036923166",
+                  "city": "SOMERSWORTH",
+                  "stateName": "NH",
+                  "businessName": "PINEWOOD PROFESSIONALS, LLC",
+                  "addressLine1": "255 ROUTE 108",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "507562",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "038571843",
+                  "phoneNumber": "6036592494",
+                  "city": "NEWMARKET",
+                  "stateName": "NH",
+                  "businessName": "LAMPREY HEALTH CARE INC",
+                  "addressLine1": "207 S MAIN ST",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "013761830",
+              "phoneNumber": "4137723748",
+              "licenseState": "MA",
+              "city": "TURNERS FALLS",
+              "stateName": "MA",
+              "businessName": "COMMUNITY HEALTH CENTER OF FRANKLIN COUNTY, INC.",
+              "addressLine1": "450 W RIVER ST",
+              "licenseNumber": "48ZB",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "013011238",
+              "phoneNumber": "4133258500",
+              "licenseState": "MA",
+              "city": "GREENFIELD",
+              "stateName": "MA",
+              "businessName": "COMMUNITY HEALTH CENTER OF FRANKLIN COUNTY, INCORPORATED",
+              "addressLine1": "489 BERNARDSTON RD",
+              "adressLine2": "SUITE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 565460,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 495370,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "565460",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "013761830",
+                  "phoneNumber": "4137723748",
+                  "licenseState": "MA",
+                  "city": "TURNERS FALLS",
+                  "stateName": "MA",
+                  "businessName": "COMMUNITY HEALTH CENTER OF FRANKLIN COUNTY, INC.",
+                  "addressLine1": "450 W RIVER ST",
+                  "licenseNumber": "48ZB",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "495370",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "013011238",
+                  "phoneNumber": "4133258500",
+                  "licenseState": "MA",
+                  "city": "GREENFIELD",
+                  "stateName": "MA",
+                  "businessName": "COMMUNITY HEALTH CENTER OF FRANKLIN COUNTY, INCORPORATED",
+                  "addressLine1": "489 BERNARDSTON RD",
+                  "adressLine2": "SUITE 108",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "038781543",
+              "phoneNumber": "6036923166",
+              "city": "SOMERSWORTH",
+              "stateName": "NH",
+              "businessName": "PINEWOOD PROFESSIONALS, LLC",
+              "addressLine1": "255 ROUTE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "030771220",
+              "phoneNumber": "6038953351",
+              "city": "RAYMOND",
+              "stateName": "NH",
+              "businessName": "LAMPREY HEALTH CARE INC",
+              "addressLine1": "128 ROUTE 27",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 3849449,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 946702,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "946702",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "030771220",
+                  "phoneNumber": "6038953351",
+                  "city": "RAYMOND",
+                  "stateName": "NH",
+                  "businessName": "LAMPREY HEALTH CARE INC",
+                  "addressLine1": "128 ROUTE 27",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3849449",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "038781543",
+                  "phoneNumber": "6036923166",
+                  "city": "SOMERSWORTH",
+                  "stateName": "NH",
+                  "businessName": "PINEWOOD PROFESSIONALS, LLC",
+                  "addressLine1": "255 ROUTE 108",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "zipCode": "038781543",
+              "phoneNumber": "6036923166",
+              "city": "SOMERSWORTH",
+              "stateName": "NH",
+              "businessName": "PINEWOOD PROFESSIONALS, LLC",
+              "addressLine1": "255 ROUTE 108",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "030603924",
+              "phoneNumber": "6038831626",
+              "city": "NASHUA",
+              "stateName": "NH",
+              "businessName": "LAMPREY HEALTH CARE INC",
+              "addressLine1": "22 PROSPECT ST",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 3849449,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 945023,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "945023",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "030603924",
+                  "phoneNumber": "6038831626",
+                  "city": "NASHUA",
+                  "stateName": "NH",
+                  "businessName": "LAMPREY HEALTH CARE INC",
+                  "addressLine1": "22 PROSPECT ST",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "3849449",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "zipCode": "038781543",
+                  "phoneNumber": "6036923166",
+                  "city": "SOMERSWORTH",
+                  "stateName": "NH",
+                  "businessName": "PINEWOOD PROFESSIONALS, LLC",
+                  "addressLine1": "255 ROUTE 108",
+                  "typeCode": "2"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        },
+        {
+          "row": [
+            {
+              "taxonomyCode": "101YA0400X",
+              "lastName": "WARNER",
+              "firstName": "KATHERINE",
+              "zipCode": "975049181",
+              "phoneNumber": "5417723524",
+              "gender": "F",
+              "city": "MEDFORD",
+              "stateName": "OR",
+              "addressLine1": "1016 COURT ST",
+              "crediantial": "LICENSED PSYCHOLOGIS",
+              "typeCode": "1"
+            },
+            {
+              "Specialization": "Addiction (Substance Use Disorder)",
+              "taxID": "101YA0400X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            },
+            {
+              "taxonomyCode": "101YM0800X",
+              "zipCode": "975018957",
+              "phoneNumber": "5415123151",
+              "licenseState": "OR",
+              "city": "MEDFORD",
+              "stateName": "OR",
+              "businessName": "LA CLINICA DEL VALLE FAMILY HEALTHCARE CENTER INC.",
+              "addressLine1": "3617 S PACIFIC HWY",
+              "typeCode": "2"
+            },
+            {
+              "Specialization": "Mental Health",
+              "taxID": "101YM0800X",
+              "Classification": "Counselor",
+              "Definition": "Definition to come...",
+              "Grouping": "Behavioral Health & Social Service Providers"
+            }
+          ],
+          "meta": [
+            {
+              "id": 2594075,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 1,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 679854,
+              "type": "node",
+              "deleted": false
+            },
+            {
+              "id": 2,
+              "type": "node",
+              "deleted": false
+            }
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "1",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Addiction (Substance Use Disorder)",
+                  "taxID": "101YA0400X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Taxonomy"
+                ],
+                "properties": {
+                  "Specialization": "Mental Health",
+                  "taxID": "101YM0800X",
+                  "Classification": "Counselor",
+                  "Definition": "Definition to come...",
+                  "Grouping": "Behavioral Health & Social Service Providers"
+                }
+              },
+              {
+                "id": "679854",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YM0800X",
+                  "zipCode": "975018957",
+                  "phoneNumber": "5415123151",
+                  "licenseState": "OR",
+                  "city": "MEDFORD",
+                  "stateName": "OR",
+                  "businessName": "LA CLINICA DEL VALLE FAMILY HEALTHCARE CENTER INC.",
+                  "addressLine1": "3617 S PACIFIC HWY",
+                  "typeCode": "2"
+                }
+              },
+              {
+                "id": "2594075",
+                "labels": [
+                  "Physician"
+                ],
+                "properties": {
+                  "taxonomyCode": "101YA0400X",
+                  "lastName": "WARNER",
+                  "firstName": "KATHERINE",
+                  "zipCode": "975049181",
+                  "phoneNumber": "5417723524",
+                  "gender": "F",
+                  "city": "MEDFORD",
+                  "stateName": "OR",
+                  "addressLine1": "1016 COURT ST",
+                  "crediantial": "LICENSED PSYCHOLOGIS",
+                  "typeCode": "1"
+                }
+              }
+            ],
+            "relationships": []
+          }
+        }
+      ],
+      "stats": {
+        "contains_updates": false,
+        "nodes_created": 0,
+        "nodes_deleted": 0,
+        "properties_set": 0,
+        "relationships_created": 0,
+        "relationship_deleted": 0,
+        "labels_added": 0,
+        "labels_removed": 0,
+        "indexes_added": 0,
+        "indexes_removed": 0,
+        "constraints_added": 0,
+        "constraints_removed": 0
+      }
+    }
+  ],
+  "errors": [],
+  "responseTime": 183880
+}

@@ -45,10 +45,6 @@ namespace AR.Core.Graph.ARTouch
         void Update()
         {
 
-
-
-
-
             if (GazeManager.Instance == null || CursorOnHolograms == null || CursorOffHolograms == null)
             {
                 return;

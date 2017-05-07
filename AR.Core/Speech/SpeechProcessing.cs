@@ -11,11 +11,11 @@ namespace AR.Core.Speech
     public class SpeechProcessing : MonoBehaviour
     {
         private Logging.DBLogger myLogs;
-        public string[] m_Keywords = 
-            {"Graph Properties", "Dense", "Reset", "Load Simple Graph", "Load Sample Graph", "Load Database Graph",
-            "Depth First Search", "Breadth First Search", "Move Nodes", "Disable Speach", "Enable Speach" };
+        public string[] m_Keywords = AR.Core.Types.SystemSetup.RootSpeechKeywords.ToArray<String>();
+         
         public Graph.Graph m_graph;
-        private KeywordRecognizer m_Recognizer;
+        public KeywordRecognizer m_Recognizer;
+
 
         public SpeechProcessing()
         {
@@ -31,11 +31,48 @@ namespace AR.Core.Speech
             m_Recognizer = new KeywordRecognizer(m_Keywords);
             m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
             m_Recognizer.Start();
+
         }
 
         public void Start() 
         {
             myLogs.LogMessage(LoggingLevels.Verbose, "SpeechProcessing Start Called", Module: "SpeechProcessing.Start", Version: "ALPHA");
+        }
+
+        public void resetSpecchList(List<String> newKeywords)
+        {
+            myLogs.LogMessage(LoggingLevels.Verbose, "Resetting Speech List: ", Module: "SpeechProcessing.resetSpecchList", Version: "ALPHA");
+
+
+            var totalList = new List<String>(AR.Core.Types.SystemSetup.RootSpeechKeywords);
+
+
+            if (totalList != null)
+                totalList.AddRange(newKeywords);
+
+            if (m_Recognizer.IsRunning)
+                m_Recognizer.Stop();
+
+
+            m_Keywords = totalList.ToArray<String>();
+            m_Recognizer = new KeywordRecognizer(totalList.ToArray<String>());
+            m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
+            m_Recognizer.Start();
+
+
+            StringBuilder sb = new StringBuilder();
+
+            //can be used to dedupe
+            HashSet<String> uniqueCommands = new HashSet<string>();
+
+
+            foreach (var st in m_Keywords)
+            {
+                sb.Append(st + " . ");
+            }
+
+            myLogs.LogMessage(LoggingLevels.Verbose, "Resetting Speech List: " + sb.ToString(), Module: "SpeechProcessing.resetSpecchList", Version: "ALPHA");
+
         }
 
         private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -59,6 +96,9 @@ namespace AR.Core.Speech
                     m_graph.RaiseFeedback("Visualizing breadth First Search");
                     myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: Breadth First Search(Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
                     m_graph.BFS();
+                    break;
+                case "Stop":
+                    m_graph.RaiseFeedback(" ");
                     break;
                 case "Graph Properties":
                     myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: Graph Properties (Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
@@ -99,8 +139,67 @@ namespace AR.Core.Speech
                     m_graph.RaiseFeedback("Enabling Speach");
                     myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: Enable Speach (Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
                     break;
+                case "Show Edges":
+                    m_graph.RaiseFeedback("Showing All Edges");
+                    m_graph.ShowAllEdges();
+                    break;
+                case "Hide Edges":
+                    m_graph.RaiseFeedback("Hiding All Edges");
+                    m_graph.HideAllEdges();
+                    break;
+                case "Show Nodes":
+                    m_graph.RaiseFeedback("Showing All Nodes");
+                    m_graph.ShowAllNodes();
+                    break;
+                case "Hide Nodes":
+                    m_graph.RaiseFeedback("Hiding All Nodes");
+                    m_graph.HideAllNodes();
+                    break;
+                case "List Commands":
+                    myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: List Commands (Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
+                    m_graph.RaiseFeedback("Listing Commands ");
+                    StringBuilder sb = new StringBuilder();
 
+                    //can be used to dedupe
+                    HashSet<String> uniqueCommands = new HashSet<string>();
+
+
+                    foreach (var st in m_Keywords)
+                    {
+                        sb.Append(st + " . ");
+                    }
+                    m_graph.RaiseFeedback("Commands Available. " +  sb.ToString());
+                    myLogs.LogMessage(LoggingLevels.Verbose, "Commands Available:" + sb.ToString(), Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");
+                    break;
                 default:
+                    //handle the approximate matches here
+                    if (args.text.Contains("Node Scale Color"))
+                    {
+                        var propname = args.text.Replace("Node Scale Color", "").Trim();
+                        m_graph.RaiseFeedback(args.text); //say what you're doing here
+                        m_graph.ColorNodesPropBased(propname);
+                    }
+                    if (args.text.Contains("Node Scale Size"))
+                    {
+                        var propname = args.text.Replace("Node Scale Size", "").Trim();
+                        m_graph.RaiseFeedback(args.text); //say what you're doing here
+                        m_graph.ScaleNodesPropBased(propname);
+                    }
+                    if (args.text.Contains("Edge Scale Color"))
+                    {
+                        var propname = args.text.Replace("Edge Scale Color", "").Trim();
+                        m_graph.RaiseFeedback(args.text); //say what you're doing here
+                        m_graph.ColorEdgePropBased(propname);
+                    }
+                    if (args.text.Contains("Edge Scale Size"))
+                    {
+                        var propname = args.text.Replace("Edge Scale Size", "").Trim();
+
+                        m_graph.RaiseFeedback(args.text + ", Not Implemented Correctly"); //say what you're doing here
+                        //m_graph.ScaleEdgePropBased(propname);
+                    }
+
+
                     break;
             }
         }

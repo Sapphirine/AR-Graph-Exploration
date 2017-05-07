@@ -29,6 +29,12 @@ namespace AR.Core.Types
             }
         }
 
+        //Scaling factors 
+        public static float NODE_SCALE_FACTOR = 3.00f;
+        public static float EDGE_SCALE_FACTOR = 2.00f;
+
+
+
         //bounding box scaling factors
         private static float BoundryScale_Mini = .01f;
         private static float BoundryScale_Normal = .1f;
@@ -53,11 +59,11 @@ namespace AR.Core.Types
         public static Boolean EXTRACT_SAMPLEGRAPHS = true;
 
 
+
+
         public static float TIME_ANIMATION_MOVENODES = 3.0f;
 
-        public static Int32 DEF_DENSE_NODES = 1;
-
-
+        public static Int32 DEF_DENSE_NODES = 3;
 
         public static String URL_SAMPLEGRAPH = "http://awesome.cs.jhu.edu/data/static/graphs/cat/mixed.species_brain_1.graphml";
         public static String URL_SIMPLEGRAPH = "http://graphml.graphdrawing.org/primer/simple.graphml";

@@ -83,6 +83,37 @@ namespace AR.Core.Graph
         }
 
 
+
+        private Edge ScaleSmooth(Vector3 vec)
+        {
+            StartCoroutine(SmoothScaleObject(vec, Types.GraphConfiguration.TIME_ANIMATION_MOVENODES));
+            return this;
+
+        }
+        public Edge ScaleSmooth(float scaleFactor)
+        {
+            Vector3 vStart = StartNode.myARObject.transform.position;
+            Vector3 vEnd = EndNode.myARObject.transform.position;
+            var v3T = myARObject.transform.localScale;
+            v3T.y = v3T.x = v3T.z = Types.GraphConfiguration.EDGE_WIDTH;
+            v3T.y = (vStart - vEnd).magnitude;
+
+
+            Vector3 vec = new Vector3(v3T.x * scaleFactor, v3T.y, v3T.z * scaleFactor);
+            return ScaleSmooth(vec);
+        }
+
+        public Edge SmoothlyScaleColor(float colorShiftGreen0to1)
+        {
+
+            Color c = new Color(1, colorShiftGreen0to1, 0f);
+            StartCoroutine(SmoothColorObject(myARObject.GetComponent<MeshRenderer>().material.color, c, Types.GraphConfiguration.TIME_ANIMATION_MOVENODES));
+            return this;
+
+
+
+        }
+
         private void Awake()
         {
             myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Awake Edge Method Called", Module: "Edge.Awake", Version: "ALPHA");
@@ -129,6 +160,40 @@ namespace AR.Core.Graph
             myLogs.LogMessage(AR.Core.Types.LoggingLevels.Verbose, "Edge has GazeEntered", Module: "Edge.GazeEntered", Version: "ALPHA");
 
         }
+
+
+        IEnumerator SmoothScaleObject(Vector3 newScale, float time)
+        {
+
+            float i = 0.0f;
+            float rate = 1.0f / time;
+            while (i < 1.0f)
+            {
+                i += Time.deltaTime * rate;
+                myARObject.transform.localScale = Vector3.Lerp(myARObject.transform.localScale, newScale, i);
+         
+
+                yield return null;
+
+            }
+        }
+
+        IEnumerator SmoothColorObject(Color a, Color b, float time)
+        {
+
+            float i = 0.0f;
+            float rate = 1.0f / time;
+            while (i < 1.0f)
+            {
+                i += Time.deltaTime * rate;
+                myARObject.GetComponent<MeshRenderer>().material.color = Color.Lerp(a, b, i);
+        
+
+                yield return null;
+
+            }
+        }
+
 
     }
 }

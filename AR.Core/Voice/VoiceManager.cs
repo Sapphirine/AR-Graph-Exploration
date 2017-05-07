@@ -14,8 +14,8 @@ namespace AR.Core.Voice
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("Viewing Edge " + e.ID.ToString());
-            sb.Append(" Which connects nodes " + e.StartNode.UserID.ToString() + " and " + e.EndNode.UserID.ToString() + ".");
-            sb.Append("  The edge has the following properties ");
+            sb.Append(" Which connects nodes " + e.StartNode.UserID.ToString() + " and " + e.EndNode.UserID.ToString() + ". ");
+            sb.Append("  The edge has the following properties. ");
 
 
             //if Neo4j rip properties from 
@@ -27,7 +27,7 @@ namespace AR.Core.Voice
                     var x = AR.Core.IO.SimpleJson.DeserializeObject<Dictionary<String, System.Object>>(JsonOfProps);
                     foreach (var kv in x)
                     {
-                        sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ".");
+                        sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ". ");
                     }
                 }
             }
@@ -35,7 +35,7 @@ namespace AR.Core.Voice
             {
                 foreach (var kv in e.Properties)
                 {
-                    sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ".");
+                    sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ". ");
                 }
             }
 
@@ -48,7 +48,7 @@ namespace AR.Core.Voice
             StringBuilder sb = new StringBuilder();
             sb.Append("Viewing Node " + n.ID.ToString());
             sb.Append(" Which has " + n.EdgesOut.Count.ToString() + " Outgoing edges and " + n.EdgesIn.Count.ToString() + " incomming edges.");
-            sb.Append("  The node has the following properties ");
+            sb.Append("  The node has the following properties. ");
 
 
             //if Neo4j rip properties from 
@@ -59,13 +59,13 @@ namespace AR.Core.Voice
                     var x = AR.Core.IO.SimpleJson.DeserializeObject<Dictionary<String, System.Object>>(JsonOfProps);
                     foreach (var kv in x)
                     {
-                        sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ".");
+                        sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ". ");
                     }
                 }
 
             foreach (var kv in n.Properties)
             {
-                sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ".");
+                sb.Append(kv.Key.ToString() + " " + kv.Value.ToString() + ". ");
             }
             return sb.ToString();
         }
@@ -74,7 +74,7 @@ namespace AR.Core.Voice
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("The Graph shown " + g.LABEL);
-            sb.Append(" has " + g.AllEdges.Count.ToString() + " total edges and " + g.AllNodes.Count.ToString() + " total nodes.");
+            sb.Append(" has " + g.AllEdges.Count.ToString() + " total edges and " + g.AllNodes.Count.ToString() + " total nodes. ");
             return sb.ToString();
         }
 

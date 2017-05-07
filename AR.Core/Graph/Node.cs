@@ -150,10 +150,11 @@ namespace AR.Core.Graph
             return this;
 
         }
-
-        private void Node_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        public Node MoveTo(float x, float y, float z)
         {
-            throw new NotImplementedException();
+            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Moving Node to x:" + x.ToString() + " y:" + y.ToString() + " z:" + z.ToString(), Module: "Node.GazeEntered", Version: "ALPHA");
+            Vector3 vec = new Vector3(x, y, z);
+            return MoveTo(vec);
         }
 
         public Node MoveDelta(Vector3 vec)
@@ -170,23 +171,18 @@ namespace AR.Core.Graph
             return this;
 
         }
+        public Node MoveDelta(float x, float y, float z)
+        {
+            Vector3 vec = new Vector3(x, y, z);
+            return MoveDelta(vec);
+        }
+
 
         public Node Scale(Vector3 vec)
         {
             myARObject.transform.localScale = vec;
             return this;
 
-        }
-        public Node MoveTo(float x, float y, float z)
-        {
-            myLogs.LogMessage(ARTypes.LoggingLevels.Verbose, "Moving Node to x:" + x.ToString() + " y:"+y.ToString() + " z:" +z.ToString(), Module: "Node.GazeEntered", Version: "ALPHA");
-            Vector3 vec = new Vector3(x, y, z);
-            return MoveTo(vec);
-        }
-        public Node MoveDelta(float x, float y, float z)
-        {
-            Vector3 vec = new Vector3(x, y, z);
-            return MoveDelta(vec);
         }
         public Node Scale(float x, float y, float z)
         {
@@ -195,6 +191,17 @@ namespace AR.Core.Graph
             return this;
 
         }
+        public Node ScaleSmooth(Vector3 vec)
+        {
+            StartCoroutine(SmoothScaleObject(vec, Types.GraphConfiguration.TIME_ANIMATION_MOVENODES));
+            return this;
+
+        }
+        public Node ScaleSmooth(float x, float y, float z)
+        {
+            Vector3 vec = new Vector3(x, y, z);
+            return ScaleSmooth(vec);
+        }
         public Node EvenlyScale(float evenly)
         {
             Vector3 vec = new Vector3(evenly, evenly, evenly);
@@ -202,6 +209,26 @@ namespace AR.Core.Graph
             return this;
 
         }
+
+
+        private void Node_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Node SmoothlyScaleColor(float colorShiftGreen0to1)
+        {
+
+            Color c = new Color(1, colorShiftGreen0to1, 0f);
+            StartCoroutine(SmoothColorObject(myARObject.GetComponent<MeshRenderer>().material.color, c, Types.GraphConfiguration.TIME_ANIMATION_MOVENODES));
+            return this;
+
+
+
+        }
+
+
         public Node ChangeNodeColor(Visuals.Colors c)
         {
             myARObject.GetComponent<MeshRenderer>().material.color = c.myColor;
@@ -210,6 +237,14 @@ namespace AR.Core.Graph
         public Node ChangeNodeColor(Color c)
         {
             myARObject.GetComponent<MeshRenderer>().material.color = c;
+            return this;
+        }
+        public Node ChangeNodeTransparency(float Transparency)
+        {
+            var curColor = myARObject.GetComponent<MeshRenderer>().material.color;
+
+            curColor.a = Transparency;
+            myARObject.GetComponent<MeshRenderer>().material.color = curColor;
             return this;
         }
         public Node HideNode()
@@ -223,15 +258,6 @@ namespace AR.Core.Graph
             return this;
         }
 
-        public Node ChangeNodeTransparency(float Transparency)
-        {
-            var curColor = myARObject.GetComponent<MeshRenderer>().material.color;
-
-            curColor.a = Transparency;
-            myARObject.GetComponent<MeshRenderer>().material.color = curColor;
-            return this;
-        }
-
         private void CleanEdges()
         {
             foreach (Edge Edge in EdgesIn.Values)
@@ -239,6 +265,10 @@ namespace AR.Core.Graph
             foreach (Edge Edge in EdgesOut.Values)
                 Edge.RecenterEdges();
         }
+
+
+        //time based events
+
 
         IEnumerator SmoothMoveObject(Vector3 startPos, Vector3 endPos, float time)
         {
@@ -254,7 +284,39 @@ namespace AR.Core.Graph
                 yield return null;
 
             }
-        }  
+        }
+
+        IEnumerator SmoothScaleObject(Vector3 newScale, float time)
+        {
+
+            float i = 0.0f;
+            float rate = 1.0f / time;
+            while (i < 1.0f)
+            {
+                i += Time.deltaTime * rate;
+                myARObject.transform.localScale = Vector3.Lerp(myARObject.transform.localScale, newScale, i);
+                CleanEdges();
+
+                yield return null;
+
+            }
+        }
+
+        IEnumerator SmoothColorObject(Color a, Color b, float time)
+        {
+
+            float i = 0.0f;
+            float rate = 1.0f / time;
+            while (i < 1.0f)
+            {
+                i += Time.deltaTime * rate;
+                myARObject.GetComponent<MeshRenderer>().material.color = Color.Lerp(a, b, i);
+                CleanEdges();
+
+                yield return null;
+
+            }
+        }
 
         IEnumerator WaitforSomeSeconds(float waittime)
         {

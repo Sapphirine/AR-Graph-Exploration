@@ -142,6 +142,8 @@ namespace AR.Core.Graph
         }
 
 
+
+
         //this handles all the edge select, add, remove commands a user would need
 
         public Edge AddEdges(Node StartNode, Node EndNode, String Label = "")
@@ -265,6 +267,33 @@ namespace AR.Core.Graph
 
         }
 
+
+        //Hide all item types
+        public void HideAllEdges()
+        {
+            foreach (Edge e in AllEdges.Values)
+                e.HideEdge();
+
+        }
+        public void ShowAllEdges()
+        {
+            foreach (Edge e in AllEdges.Values)
+                e.ShowEdge();
+
+        }
+        public void HideAllNodes()
+        {
+            foreach (Node n in AllNodes.Values)
+                n.HideNode();
+
+        }
+        public void ShowAllNodes()
+        {
+            foreach (Node n in AllNodes.Values)
+                n.ShowNode();
+
+        }
+
         //Color Changes
         public void ShowDenseNodes()
         {
@@ -366,7 +395,7 @@ namespace AR.Core.Graph
             switch (gt)
             {
                 case GraphTypes.Neo4jLocal:
-                    AR.Core.Communications.Neo4jConnector.getInstance().GetGraphFromQuery(this, "MATCH p=()-[r:ORDERS]->() RETURN p LIMIT 100");
+                    AR.Core.Communications.Neo4jConnector.getInstance().GetGraphFromQuery(this, "MATCH p=()-[r:ORDERS]->() RETURN p LIMIT 100", true);
                     break;
                 case GraphTypes.Simple:
                     AR.Core.Communications.GraphMLGraphFactory.GetGraphFromURL(this, AR.Core.Types.GraphConfiguration.URL_SIMPLEGRAPH);
@@ -490,6 +519,210 @@ namespace AR.Core.Graph
             }
         }
 
+
+        public void ScaleNodesPropBased(String PropertyName)
+        {
+            float MaxFloat = 0f;
+            float MinFloat = 0f;
+            float ValFloat = 0f;
+
+            //get range of property
+            foreach (Node n in AllNodes.Values)
+            {
+                if (n.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(n.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        MaxFloat = (ValFloat > MaxFloat) ? ValFloat : MaxFloat;
+                        MinFloat = (ValFloat < MinFloat) ? ValFloat : MinFloat;
+                    }
+                }
+            }
+
+            //scale nodes
+            foreach (Node n in AllNodes.Values)
+            {
+               
+                if (n.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(n.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        var nScaleFactor = (ValFloat - MinFloat) / (MaxFloat - MinFloat) * Core.Types.GraphConfiguration.NODE_SCALE_FACTOR * Core.Types.GraphConfiguration.NODE_DIAMETER + Core.Types.GraphConfiguration.NODE_DIAMETER;
+                        n.ScaleSmooth(new Vector3(nScaleFactor, nScaleFactor, nScaleFactor));
+                        continue;
+                    }
+                }
+
+                //reset all node sizes that are not set above
+                n.ScaleSmooth(new Vector3(Core.Types.GraphConfiguration.NODE_DIAMETER, Core.Types.GraphConfiguration.NODE_DIAMETER, Core.Types.GraphConfiguration.NODE_DIAMETER));
+
+            }
+
+
+
+        }
+        public void ColorNodesPropBased(String PropertyName)
+        {
+            float MaxFloat = 0f;
+            float MinFloat = 0f;
+            float ValFloat = 0f;
+
+            //get range of property
+            foreach (Node n in AllNodes.Values)
+            {
+                if (n.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(n.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        MaxFloat = (ValFloat > MaxFloat) ? ValFloat : MaxFloat;
+                        MinFloat = (ValFloat < MinFloat) ? ValFloat : MinFloat;
+                    }
+                }
+            }
+
+            //scale nodes
+            foreach (Node n in AllNodes.Values)
+            {
+                if (n.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(n.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        var nScaleFactor = (ValFloat - MinFloat) / (MaxFloat - MinFloat);
+                        n.SmoothlyScaleColor(nScaleFactor);
+                        continue;
+                    }
+                }
+
+                n.ChangeNodeColor(Visuals.Colors.Blue);
+            }
+
+
+
+        }
+
+
+        public void ScaleEdgePropBased(String PropertyName)
+        {
+            float MaxFloat = 0f;
+            float MinFloat = 0f;
+            float ValFloat = 0f;
+
+            //get range of property
+            foreach (Edge e in AllEdges.Values)
+            {
+                if (e.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(e.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        MaxFloat = (ValFloat > MaxFloat) ? ValFloat : MaxFloat;
+                        MinFloat = (ValFloat < MinFloat) ? ValFloat : MinFloat;
+                    }
+                }
+            }
+
+            //scale nodes
+            foreach (Edge e in AllEdges.Values)
+            {
+
+                if (e.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(e.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        var nScaleFactor = (ValFloat - MinFloat) / (MaxFloat - MinFloat) * Core.Types.GraphConfiguration.EDGE_SCALE_FACTOR * Core.Types.GraphConfiguration.EDGE_WIDTH + Core.Types.GraphConfiguration.EDGE_WIDTH;
+                        e.ScaleSmooth(nScaleFactor);
+                        continue;
+                    }
+                }
+
+                //reset all node sizes that are not set above
+                e.ScaleSmooth(Core.Types.GraphConfiguration.EDGE_WIDTH);
+            }
+
+
+
+        }
+        public void ColorEdgePropBased(String PropertyName)
+        {
+            float MaxFloat = 0f;
+            float MinFloat = 0f;
+            float ValFloat = 0f;
+
+            //get range of property
+            foreach (Edge e in AllEdges.Values)
+            {
+                if (e.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(e.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        MaxFloat = (ValFloat > MaxFloat) ? ValFloat : MaxFloat;
+                        MinFloat = (ValFloat < MinFloat) ? ValFloat : MinFloat;
+                    }
+                }
+            }
+
+            //scale nodes
+            foreach (Edge e in AllEdges.Values)
+            {
+                if (e.Properties.ContainsKey(PropertyName))
+                {
+                    if (float.TryParse(e.Properties[PropertyName].ToString(), out ValFloat))
+                    {
+                        var nScaleFactor = (ValFloat - MinFloat) / (MaxFloat - MinFloat);
+                        e.SmoothlyScaleColor(nScaleFactor);
+                        continue;
+                    }
+                }
+
+                e.ChangeEdgeColor(Visuals.Colors.Green);
+            }
+
+
+
+        }
+
+
+        public void GetScalablePropertiesList()
+        {
+            float ValFloat = 0f;
+            HashSet<String> ScalableProps = new HashSet<string>();
+
+            //get range of property
+            foreach (Node n in AllNodes.Values)
+            {
+                foreach (var val in n.Properties)
+                {
+
+                    if (float.TryParse(val.Value.ToString(), out ValFloat))
+                    {
+                        ScalableProps.Add("Node Scale Size " + val.Key);
+                        ScalableProps.Add("Node Scale Color " + val.Key);
+                    }
+
+                }
+            }
+
+            foreach (Edge e in AllEdges.Values)
+            {
+                foreach (var val in e.Properties)
+                {
+
+                    if (float.TryParse(val.Value.ToString(), out ValFloat))
+                    {
+                        ScalableProps.Add("Edge Scale Size " + val.Key);
+                        ScalableProps.Add("Edge Scale Color " + val.Key);
+                    }
+
+                }
+            }
+
+
+
+            mySpeechEngine.resetSpecchList(ScalableProps.ToList<String>());
+
+
+        }
+
+
         //Monobehavior methods below
         private void Awake()
         {
@@ -504,6 +737,8 @@ namespace AR.Core.Graph
             myGestureManager.m_graph = this;
 
 
+
+        
             try
             {
 

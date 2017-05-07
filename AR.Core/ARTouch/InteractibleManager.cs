@@ -29,12 +29,10 @@ namespace AR.Core.Graph.ARTouch
 
         private GameObject oldFocusedGameObject = null;
 
-
         private void Awake()
         {
            
         }
-
 
         void Start()
         {
@@ -49,7 +47,7 @@ namespace AR.Core.Graph.ARTouch
 
             if (GazeManager.Instance.Hit)
             {
-                myLogs.LogMessage(AR.Core.Types.LoggingLevels.Verbose, "InteractibleManager.Instance.Hit", "InteractibleManager.update", "Alpha");
+                //myLogs.LogMessage(AR.Core.Types.LoggingLevels.Verbose, "InteractibleManager.Instance.Hit", "InteractibleManager.update", "Alpha");
 
 
 
@@ -72,7 +70,7 @@ namespace AR.Core.Graph.ARTouch
             if (FocusedGameObject != oldFocusedGameObject)
             {
                 ResetFocusedInteractible();
-                myLogs.LogMessage(AR.Core.Types.LoggingLevels.Verbose, "InteractibleManager.Instance.Hit (NEW OBJECT)", "InteractibleManager.update", "Alpha");
+                //myLogs.LogMessage(AR.Core.Types.LoggingLevels.Verbose, "InteractibleManager.Instance.Hit (NEW OBJECT)", "InteractibleManager.update", "Alpha");
 
                 if (m_graph != null)
                 {
