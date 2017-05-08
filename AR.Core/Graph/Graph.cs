@@ -376,7 +376,7 @@ namespace AR.Core.Graph
         public void ReloadGraph(GraphTypes gt )
         {
             RaiseFeedback("Has not been implemented yet");
-
+            return;
 
 
             //Remove all nodes and edges, wipe lists and reload

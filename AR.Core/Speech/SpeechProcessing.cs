@@ -98,7 +98,7 @@ namespace AR.Core.Speech
                     m_graph.BFS();
                     break;
                 case "Stop":
-                    m_graph.RaiseFeedback(" ");
+                    m_graph.RaiseFeedback(" Stopping ");
                     break;
                 case "Graph Properties":
                     myLogs.LogMessage(LoggingLevels.Verbose, "OnPhraseRecognized: Graph Properties (Test)", Module: "SpeechProcessing.OnPhraseRecognized", Version: "ALPHA");

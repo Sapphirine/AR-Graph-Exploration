@@ -13,8 +13,8 @@ namespace AR.Core.Types
     {
 
 
-        public static Boolean ENABLE_REMOTE_LOGGING = true;
-        public static Boolean ENABLE_PRINT_LOGGING = true;
+        public static Boolean ENABLE_REMOTE_LOGGING = false;
+        public static Boolean ENABLE_PRINT_LOGGING = false;
 
 
         public static String DBLog_Server = "bphphome.dyndns.org";
