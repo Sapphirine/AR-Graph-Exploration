@@ -67,7 +67,7 @@ namespace AR.Core.Types
 
         public static String URL_SAMPLEGRAPH = "http://awesome.cs.jhu.edu/data/static/graphs/cat/mixed.species_brain_1.graphml";
         public static String URL_SIMPLEGRAPH = "http://graphml.graphdrawing.org/primer/simple.graphml";
-
+        public static string URL_VISFINALGRAPH = "https://raw.githubusercontent.com/Sapphirine/AR-Graph-Exploration/master/Final%20Visualization/AnalyticsOut.graphml";
 
 
     }

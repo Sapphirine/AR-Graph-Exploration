@@ -199,7 +199,6 @@ namespace AR.Core.Speech
                         //m_graph.ScaleEdgePropBased(propname);
                     }
 
-
                     break;
             }
         }

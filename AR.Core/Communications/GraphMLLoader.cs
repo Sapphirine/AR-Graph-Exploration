@@ -251,6 +251,43 @@ namespace AR.Core.Communications
                         }
                     }
 
+
+                    try
+                    {
+                        
+
+
+                        List<String> Results = new List<string>();
+
+
+                        Results.Add(Node["data"].InnerText);
+                        var myNextInnerNode = Node["data"].NextSibling;
+
+                        while (myNextInnerNode != null)
+                        {
+                            Results.Add(myNextInnerNode.InnerText);
+                            myNextInnerNode = myNextInnerNode.NextSibling;
+                            
+                        }
+
+                        var i = 0;
+                        nextNode.Properties.Add("PhysicianNames", Results[i].Substring(0, Results[i].Length < 250 ? Results[i].Length : 250));++i;
+                        nextNode.Properties.Add("countMale", Results[i]); ++i;
+                        nextNode.Properties.Add("ClinicCount", Results[i]); ++i;
+                        nextNode.Properties.Add("countFemale", Results[i]); ++i;
+                        nextNode.Properties.Add("ClinicNames", Results[i].Substring(0, Results[i].Length < 250 ? Results[i].Length : 250)); ++i;
+                        nextNode.Properties.Add("PhysicianCount", Results[i]); ++i;
+                        nextNode.Properties.Add("NodeCount", Results[i]); ++i;
+
+                    }
+                    catch(Exception exp)
+                    {
+                        myLogs.LogMessage(ARTypes.LoggingLevels.Error, "Init GetGraphFromURL Exception: " + exp.Message,
+Module: "GraphMLGraphFactory.GetGraphFromURL", Version: "ALPHA");
+                        return;
+                    }
+
+
                 }
 
 
@@ -326,9 +363,13 @@ namespace AR.Core.Communications
 
 
 
+
+
+
                 foreach (XmlNode Node in Nodes)
                 {
                     var nextNode = retGraph.AddNodes(Node.Attributes["id"].Value, null);
+
 
                     foreach (System.Xml.XmlAttribute a in Node.Attributes)
                     {
@@ -345,43 +386,42 @@ namespace AR.Core.Communications
                         }
                     }
 
-                }
 
-
-                foreach (XmlNode Edge in Edges)
-                {
-                    Graph.Node sNode = null, tNode = null;
-
-                    //oops edge with no node created.
-                    if (Edge.Attributes["source"] == null)
-                        sNode = retGraph.AddNodes(Edge.Attributes["id"].Value, null);
-                    else
-                        sNode = retGraph.GetNode(Edge.Attributes["source"].Value);
-
-                    //oops edge with no node created.
-                    if (Edge.Attributes["target"] == null)
-                        tNode = retGraph.AddNodes(Edge.Attributes["id"].Value, null);
-                    else
-                        tNode = retGraph.GetNode(Edge.Attributes["target"].Value);
-
-                    var nextEdge = retGraph.AddEdges(sNode, tNode);
-
-                    foreach (System.Xml.XmlAttribute a in Edge.Attributes)
+                    foreach (XmlNode Edge in Edges)
                     {
-                        switch (a.Name)
-                        {
-                            case "id":
-                                nextEdge.Label = a.Value;
-                                continue;
-                            case "Weight":
-                                nextEdge.Weight = Convert.ToInt32(a.Value);
-                                continue;
-                            default:
-                                nextEdge.Properties.Add(a.Name, a.Value);
-                                continue;
-                        }
-                    }
+                        Graph.Node sNode = null, tNode = null;
 
+                        //oops edge with no node created.
+                        if (Edge.Attributes["source"] == null)
+                            sNode = retGraph.AddNodes(Edge.Attributes["id"].Value, null);
+                        else
+                            sNode = retGraph.GetNode(Edge.Attributes["source"].Value);
+
+                        //oops edge with no node created.
+                        if (Edge.Attributes["target"] == null)
+                            tNode = retGraph.AddNodes(Edge.Attributes["id"].Value, null);
+                        else
+                            tNode = retGraph.GetNode(Edge.Attributes["target"].Value);
+
+                        var nextEdge = retGraph.AddEdges(sNode, tNode);
+
+                        foreach (System.Xml.XmlAttribute a in Edge.Attributes)
+                        {
+                            switch (a.Name)
+                            {
+                                case "id":
+                                    nextEdge.Label = a.Value;
+                                    continue;
+                                case "Weight":
+                                    nextEdge.Weight = Convert.ToInt32(a.Value);
+                                    continue;
+                                default:
+                                    nextEdge.Properties.Add(a.Name, a.Value);
+                                    continue;
+                            }
+                        }
+
+                    }
                 }
 
 
